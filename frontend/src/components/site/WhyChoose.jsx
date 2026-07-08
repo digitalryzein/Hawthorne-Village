@@ -79,20 +79,20 @@ export default function WhyChoose() {
           {/* Big top photo */}
           <div className="absolute top-0 left-0 w-[70%] aspect-[4/5] rounded-[28px] overflow-hidden shadow-[0_25px_60px_-20px_rgba(10,25,47,0.35)] ring-8 ring-white">
             <img
-              src={`${process.env.PUBLIC_URL}/images/children-dentistry.jpg`}
-              alt="A young patient smiling at Hawthorne Village Dental Care in Milton"
+              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80&auto=format&fit=crop"
+              alt="Modern dental clinic interior at Hawthorne Village Dental Care Milton"
               loading="lazy"
-              className="w-full h-full object-cover object-left"
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* Bottom-right smaller photo */}
           <div className="absolute bottom-0 right-0 w-[58%] aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_25px_60px_-20px_rgba(10,25,47,0.35)] ring-8 ring-white">
             <img
-              src={`${process.env.PUBLIC_URL}/images/smile-portrait.jpg`}
-              alt="A confident smile after treatment at Hawthorne Village Dental Care"
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=700&q=80&auto=format&fit=crop"
+              alt="Dental treatment chair in a Milton clinic operatory"
               loading="lazy"
-              className="w-full h-full object-cover object-left"
+              className="w-full h-full object-cover"
             />
           </div>
 

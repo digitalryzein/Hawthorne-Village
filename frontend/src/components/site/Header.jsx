@@ -52,11 +52,15 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo */}
           <a href="#top" data-testid="site-logo" className="flex items-center gap-2.5 group">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
-              alt="Hawthorne Village Dental Care logo"
-              className="h-8 md:h-9 w-auto object-contain"
-            />
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-2xl bg-gradient-to-br from-[#0A192F] to-[#0284C7] flex items-center justify-center shadow-sm">
+              <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 5.5c-2-2-5-2-6.5 0-1.5 2-1 6 0 9s3 5 3 5c1 0 1.5-1.5 2-3 .5-1.5 1-2.5 1.5-2.5s1 1 1.5 2.5c.5 1.5 1 3 2 3 0 0 2-2 3-5s1.5-7 0-9c-1.5-2-4.5-2-6.5 0z"/>
+              </svg>
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="font-display font-semibold text-[15px] md:text-[17px] text-[#0A192F]">Hawthorne Village</span>
+              <span className="text-[10px] md:text-[11px] tracking-wider uppercase text-[#64748B]">Dental Care · Milton</span>
+            </div>
           </a>
 
           {/* Nav */}

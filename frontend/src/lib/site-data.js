@@ -1,10 +1,6 @@
 // Central data for the Hawthorne Village Dental Care homepage.
 // Content is written for real Milton, Ontario patients and never keyword-stuffed.
 
-// Local /public/images assets need the PUBLIC_URL prefix so they resolve
-// correctly when the app is built for a sub-path (e.g. GitHub Pages).
-const IMG = `${process.env.PUBLIC_URL}/images`;
-
 export const clinic = {
   name: "Hawthorne Village Dental Care",
   phone: "(905) 864-3368",
@@ -117,16 +113,16 @@ export const whyChoose = [
 
 export const services = [
   { name: "Dental Implants", blurb: "Permanent replacement teeth that look, feel and function like your own.", image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=75&auto=format&fit=crop" },
-  { name: "Invisalign", blurb: "Clear, removable aligners for adults and teens, straighter teeth in months, not years.", image: `${IMG}/service-invisalign.jpg` },
+  { name: "Invisalign", blurb: "Clear, removable aligners for adults and teens, straighter teeth in months, not years.", image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=75&auto=format&fit=crop" },
   { name: "Emergency Dentistry", blurb: "Same-day appointments for pain, swelling, broken teeth and lost fillings.", image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=75&auto=format&fit=crop" },
-  { name: "Children's Dentistry", blurb: "Warm, unhurried visits that build lifelong healthy habits from age one.", image: `${IMG}/children-dentistry.jpg` },
-  { name: "Cosmetic Dentistry", blurb: "Whitening, veneers and full smile makeovers designed around your face.", image: `${IMG}/service-cosmetic.jpg` },
-  { name: "Root Canal Therapy", blurb: "Gentle, microscope-guided treatment that saves the tooth and stops the pain.", image: `${IMG}/service-root-canal.jpg` },
+  { name: "Children's Dentistry", blurb: "Warm, unhurried visits that build lifelong healthy habits from age one.", image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=75&auto=format&fit=crop" },
+  { name: "Cosmetic Dentistry", blurb: "Whitening, veneers and full smile makeovers designed around your face.", image: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=800&q=75&auto=format&fit=crop" },
+  { name: "Root Canal Therapy", blurb: "Gentle, microscope-guided treatment that saves the tooth and stops the pain.", image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=75&auto=format&fit=crop" },
   { name: "Same-Day Crowns", blurb: "In-office CEREC crowns milled and fitted in a single visit.", image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=75&auto=format&fit=crop" },
-  { name: "Bridges & Dentures", blurb: "Custom, comfortable and natural-looking replacements for missing teeth.", image: `${IMG}/service-dentures.jpg` },
+  { name: "Bridges & Dentures", blurb: "Custom, comfortable and natural-looking replacements for missing teeth.", image: "https://images.unsplash.com/photo-1606811842497-25b3ad9c9bef?w=800&q=75&auto=format&fit=crop" },
   { name: "Teeth Whitening", blurb: "Professional-grade whitening, safe, effective and dentist-supervised.", image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=75&auto=format&fit=crop" },
-  { name: "Sedation Dentistry", blurb: "Oral sedation options for patients who feel nervous about the chair.", image: `${IMG}/service-sedation.jpg` },
-  { name: "Wisdom Teeth", blurb: "Same-day surgical extraction with modern comfort protocols.", image: `${IMG}/service-wisdom-teeth.jpg` },
+  { name: "Sedation Dentistry", blurb: "Oral sedation options for patients who feel nervous about the chair.", image: "https://images.unsplash.com/photo-1666214277657-e2be8ec2087b?w=800&q=75&auto=format&fit=crop" },
+  { name: "Wisdom Teeth", blurb: "Same-day surgical extraction with modern comfort protocols.", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=75&auto=format&fit=crop" },
   { name: "Preventive Care", blurb: "Cleanings, exams and early cavity detection with laser accuracy.", image: "https://images.unsplash.com/photo-1588776813755-9f74a97eea62?w=800&q=75&auto=format&fit=crop" },
 ];
 
@@ -203,8 +199,8 @@ export const gallery = [
     patient: "Myrna",
     problem: "Missing teeth on the upper left side with worn, discoloured teeth and an old bridge on the upper right. She wanted a new smile without a partial denture.",
     solution: "Recreated using implants on the upper left, new fixed bridges on the upper left and right, and veneers on her four front teeth.",
-    before: `${IMG}/gallery-case2-before.jpg`,
-    after: `${IMG}/gallery-case2-after.jpg`,
+    before: "https://images.unsplash.com/photo-1595003500447-88e6c9c19bd4?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=900&q=80&auto=format&fit=crop",
   },
   {
     id: "all-porcelain-crown",
@@ -212,8 +208,8 @@ export const gallery = [
     patient: "Brenda",
     problem: "Brenda didn't like the appearance of the crown on her upper right incisor. It looked too opaque and had a dark shadow at the gum line.",
     solution: "The old crown was removed and replaced with a new all-porcelain crown that lets light pass through, eliminating the shadow.",
-    before: `${IMG}/gallery-case4-before.jpg`,
-    after: `${IMG}/gallery-case4-after.jpg`,
+    before: "https://images.unsplash.com/photo-1581585504151-3d3e9cb32f65?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=900&q=80&auto=format&fit=crop",
   },
   {
     id: "porcelain-veneers",
@@ -221,8 +217,8 @@ export const gallery = [
     patient: "Leslie",
     problem: "Leslie neglected her teeth while wearing braces, which left her with stained enamel. She wanted to improve her smile without returning to braces.",
     solution: "Direct bonding on six upper teeth in a single visit masked the discolouration and reshaped teeth, a big boost to Leslie's smile and confidence.",
-    before: `${IMG}/gallery-case1-before.jpg`,
-    after: `${IMG}/gallery-case1-after.jpg`,
+    before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&q=80&auto=format&fit=crop",
   },
   {
     id: "tooth-whitening",
@@ -230,7 +226,7 @@ export const gallery = [
     patient: "Monique",
     problem: "Unhappy with the way her teeth had darkened over time, Monique wanted to bring back the whiteness of her smile.",
     solution: "Upper and lower teeth were whitened using a take-home whitening system, with dramatic results achieved in just two weeks.",
-    before: `${IMG}/gallery-case3-before.jpg`,
-    after: `${IMG}/gallery-case3-after.jpg`,
+    before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=80&auto=format&fit=crop",
   },
 ];
