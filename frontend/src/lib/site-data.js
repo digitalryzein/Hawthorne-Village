@@ -40,21 +40,6 @@ export const trustBadges = [
   { label: "Federal Coverage", value: "CDCP Accepted" },
 ];
 
-export const awards = [
-  { title: "Best Business", year: "2019", tier: "Excellence", publisher: "Three Best Rated", tone: "crimson", note: "Dr. Raju Sarna, DDS" },
-  { title: "Readers' Choice", year: "2018", tier: "Platinum", publisher: "Milton Champion", tone: "platinum" },
-  { title: "Readers' Choice", year: "2018", tier: "Diamond", publisher: "Milton Champion", tone: "diamond" },
-  { title: "Readers' Choice", year: "2017", tier: "Gold", publisher: "Milton Champion", tone: "gold" },
-  { title: "Top 3 Dentists", year: "2018", tier: "Best Rated", publisher: "in Milton", tone: "laurel", note: "The Only Best Rated" },
-  { title: "Patients' Choice", year: "2015", tier: "Winner", publisher: "Opencare", tone: "mint" },
-  { title: "Readers' Choice", year: "2019", tier: "Diamond", publisher: "Milton Champion", tone: "diamond" },
-  { title: "Readers' Choice", year: "2020", tier: "Diamond", publisher: "Milton Champion", tone: "diamond" },
-  { title: "Readers' Choice", year: "2020", tier: "Platinum", publisher: "Milton Champion", tone: "platinum" },
-  { title: "Readers' Choice", year: "2021", tier: "Platinum", publisher: "Milton Champion", tone: "platinum" },
-  { title: "Readers' Choice", year: "2022", tier: "Gold", publisher: "Milton Champion", tone: "gold" },
-  { title: "Readers' Choice", year: "2022", tier: "Platinum", publisher: "Hamilton Spectator", tone: "platinum" },
-];
-
 export const whyChoose = [
   {
     title: "Same-Day Emergency Care",

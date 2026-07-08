@@ -17,7 +17,7 @@ function ServiceCard({ s }) {
           alt={`${s.name} at Hawthorne Village Dental Care Milton`}
           loading="lazy"
           draggable={false}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[900ms] ease-out pointer-events-none"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
