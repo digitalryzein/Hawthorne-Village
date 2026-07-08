@@ -9,6 +9,7 @@ export default function JsonLd() {
       "@type": ["Dentist", "LocalBusiness", "MedicalBusiness"],
       name: clinic.name,
       image: "https://hawthornevillagedental.ca/wp-content/uploads/2019/04/drsarna-small-squareDo7-600x600-e1554354790202.jpg",
+      logo: "https://hawthornevillagedental.ca/wp-content/uploads/2024/09/Image.jpg",
       url: "https://hawthornevillagedental.ca/",
       telephone: clinic.phone,
       email: clinic.email,
