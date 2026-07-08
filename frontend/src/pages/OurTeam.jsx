@@ -355,7 +355,7 @@ function TeamGroup({ id, eyebrow, titleA, titleB, members, cols = "sm:grid-cols-
             {titleA} <span className="font-light text-[#64748B]">{titleB}</span>
           </h2>
         </div>
-        <div className={`grid ${cols} gap-6 max-w-4xl`}>
+        <div className={`grid ${cols} gap-6`}>
           {members.map((m, i) => (
             <MemberCard key={m.name} m={m} tid={`team-${id}-${i}`} />
           ))}
@@ -416,29 +416,12 @@ export default function OurTeam() {
         <Hero />
         <FeaturedDentist />
         <TeamGroup
-          id="dentists"
-          eyebrow="Associate dentists"
-          titleA="More hands,"
-          titleB="same standards."
-          members={team.dentists}
-          cols="sm:grid-cols-1 md:grid-cols-2"
-        />
-        <TeamGroup
-          id="hygienists"
-          eyebrow="Dental hygienists"
-          titleA="The cleanings patients"
-          titleB="write reviews about."
-          members={team.hygienists}
-          cols="sm:grid-cols-1 md:grid-cols-2"
-          bg="bg-[#F8FAFC]"
-        />
-        <TeamGroup
-          id="admin"
-          eyebrow="Administration and patient care"
-          titleA="The warm welcome,"
-          titleB="guaranteed."
-          members={team.admin}
-          cols="sm:grid-cols-2"
+          id="members"
+          eyebrow="The team"
+          titleA="Dentists, hygienists"
+          titleB="and the front office."
+          members={[...team.dentists, ...team.hygienists, ...team.admin]}
+          cols="sm:grid-cols-2 lg:grid-cols-4"
         />
         <WhyLoved />
         <SocialProof />
