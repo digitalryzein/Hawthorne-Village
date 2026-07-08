@@ -16,7 +16,7 @@ const exploreLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Dental Implants", href: `${HOME}#services` },
+  { label: "Dental Implants", href: `${HOME}services/dental-implants` },
   { label: "Invisalign", href: `${HOME}#services` },
   { label: "Root Canal Therapy", href: `${HOME}services/root-canal-therapy` },
   { label: "Cosmetic Dentistry", href: `${HOME}#services` },

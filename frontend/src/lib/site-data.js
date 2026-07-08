@@ -112,7 +112,7 @@ export const whyChoose = [
 ];
 
 export const services = [
-  { name: "Dental Implants", blurb: "Permanent replacement teeth that look, feel and function like your own.", image: "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=800&q=75&auto=format&fit=crop" },
+  { name: "Dental Implants", blurb: "Permanent replacement teeth that look, feel and function like your own.", image: "https://images.unsplash.com/photo-1593022356769-11f762e25ed9?w=800&q=75&auto=format&fit=crop", href: "/services/dental-implants" },
   { name: "Orthodontics", blurb: "Braces and aligners that guide teeth into place for kids, teens and adults.", image: "https://images.unsplash.com/photo-1720685193964-4529228a33c1?w=800&q=75&auto=format&fit=crop" },
   { name: "Oral Sedation", blurb: "Calm, comfortable dentistry for patients who feel nervous about the chair.", image: "https://images.unsplash.com/photo-1657470179447-0f5aa16daa91?w=800&q=75&auto=format&fit=crop" },
   { name: "Dental Bone Grafting", blurb: "Rebuilds lost jawbone so implants have a solid foundation to hold onto.", image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=75&auto=format&fit=crop" },

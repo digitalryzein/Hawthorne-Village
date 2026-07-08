@@ -2,6 +2,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
 import RootCanalTherapy from "@/pages/RootCanalTherapy";
+import DentalImplants from "@/pages/DentalImplants";
 import { Toaster } from "sonner";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/root-canal-therapy" element={<RootCanalTherapy />} />
+          <Route path="/services/dental-implants" element={<DentalImplants />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors closeButton />
