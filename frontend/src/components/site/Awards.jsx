@@ -25,7 +25,15 @@ function AwardLogo({ item }) {
   );
 }
 
-export default function Awards() {
+export default function Awards({
+  eyebrow = "Award-winning dentists in Milton",
+  title = (
+    <>
+      A decade of awards from the community <span className="font-light text-[#64748B]">we serve.</span>
+    </>
+  ),
+  subtitle = "12 consecutive awards from the Milton Champion, Hamilton Spectator, Three Best Rated and Opencare, chosen by patients rather than committees.",
+}) {
   return (
     <section
       id="awards"
@@ -35,16 +43,13 @@ export default function Awards() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 mb-8 md:mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <div className="text-[12px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-2">
-            Award-winning dentists in Milton
+            {eyebrow}
           </div>
           <h2 className="font-display text-2xl md:text-3xl text-[#0A192F] tracking-tight leading-tight">
-            A decade of awards from the community <span className="font-light text-[#64748B]">we serve.</span>
+            {title}
           </h2>
         </div>
-        <div className="text-[13px] text-[#64748B] max-w-sm">
-          12 consecutive awards from the Milton Champion, Hamilton Spectator, Three Best
-          Rated and Opencare, chosen by patients rather than committees.
-        </div>
+        <div className="text-[13px] text-[#64748B] max-w-sm">{subtitle}</div>
       </div>
 
       {/* Auto-scroller — the track is duplicated so the CSS marquee loops seamlessly. */}

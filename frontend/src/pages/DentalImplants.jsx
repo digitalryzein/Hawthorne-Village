@@ -16,13 +16,13 @@ import {
   Frown,
   Bone,
   Smile,
-  Sparkles,
   Timer,
   HeartPulse,
   Layers,
 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/site/Header";
+import Awards from "@/components/site/Awards";
 import SocialProof from "@/components/site/SocialProof";
 import FinalCTA from "@/components/site/FinalCTA";
 import VisitUs from "@/components/site/VisitUs";
@@ -79,16 +79,6 @@ const benefits = [
     title: "Eat what you love again",
     desc: "Rediscover the joy of eating healthy, varied food without the discomfort of poorly fitting dentures.",
   },
-  {
-    icon: Sparkles,
-    title: "Confidence in every laugh",
-    desc: "Speak clearly, laugh comfortably and smile without thinking about it. That's the point of it all.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Built to last a lifetime",
-    desc: "With good oral hygiene and regular checkups, implants have a 95%+ ten-year success rate and often last a lifetime.",
-  },
 ];
 
 const options = [
@@ -107,29 +97,6 @@ const options = [
   {
     title: "Bone grafting support",
     desc: "If bone has already been lost, grafting rebuilds a solid foundation so implants have something to hold onto.",
-  },
-];
-
-const steps = [
-  {
-    step: "01",
-    title: "Plan in 3D",
-    desc: "A low-radiation 3D CBCT scan maps your bone, nerves and sinuses so Dr. Sarna can plan the exact implant position before anything touches your mouth.",
-  },
-  {
-    step: "02",
-    title: "Place the implant",
-    desc: "The titanium implant that replaces your tooth root is placed precisely, with The Wand painless anaesthesia and oral sedation available if you're anxious.",
-  },
-  {
-    step: "03",
-    title: "Heal and integrate",
-    desc: "Over a few months the implant fuses with your jawbone. Plasma Rich Fibrin, made from your own platelets, can speed healing along.",
-  },
-  {
-    step: "04",
-    title: "Attach your new tooth",
-    desc: "A custom crown is attached to the implant, matched to your natural teeth. Then you simply use it like the tooth you were born with.",
   },
 ];
 
@@ -379,8 +346,40 @@ function PageHero() {
 function WhatIsAnImplant() {
   const ref = useReveal();
   return (
-    <section ref={ref} data-testid="implants-intro" className="reveal py-24 md:py-32 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-20 items-center">
+    <section ref={ref} data-testid="implants-intro" className="reveal py-24 md:py-32 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-[1fr_1.1fr] gap-14 lg:gap-20 items-center">
+        {/* Image side */}
+        <div className="relative">
+          <div className="relative rounded-[32px] overflow-hidden aspect-[4/3] shadow-[0_30px_80px_-20px_rgba(10,25,47,0.3)] group">
+            <img
+              src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=1200&q=80&auto=format&fit=crop"
+              alt="Full-arch dental implant restoration, the gold standard for tooth replacement"
+              loading="lazy"
+              className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/30 via-transparent to-transparent" />
+          </div>
+
+          {/* Floating cards */}
+          <div className="hidden md:flex absolute -bottom-6 left-6 items-center gap-3 bg-white rounded-2xl px-5 py-4 shadow-[0_20px_50px_-15px_rgba(10,25,47,0.25)] border border-slate-100">
+            <div className="w-10 h-10 rounded-xl bg-[#E6F8F3] flex items-center justify-center">
+              <HeartPulse className="w-5 h-5 text-[#0284C7]" />
+            </div>
+            <div>
+              <div className="font-display font-semibold text-[#0A192F]">A lifetime</div>
+              <div className="text-[13px] text-[#64748B]">with proper care</div>
+            </div>
+          </div>
+          <div className="hidden md:flex absolute -top-4 -right-4 items-center gap-3 bg-white rounded-2xl px-5 py-4 shadow-[0_20px_50px_-15px_rgba(10,25,47,0.25)] border border-slate-100 max-w-[240px]">
+            <Bone className="w-5 h-5 text-[#10B981] shrink-0" />
+            <div className="text-[13px] leading-tight">
+              <div className="font-semibold text-[#0A192F]">Stimulates the jaw</div>
+              <div className="text-[#64748B]">and prevents bone loss</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Content side */}
         <div>
           <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
             What is a dental implant
@@ -388,47 +387,48 @@ function WhatIsAnImplant() {
           <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
             The closest thing to <span className="font-light text-[#64748B]">the tooth you lost.</span>
           </h2>
-          <p className="mt-6 text-[16.5px] leading-relaxed text-[#475569]">
+          <p className="mt-6 text-[16.5px] leading-relaxed text-[#475569] max-w-xl">
             Dental implants are currently the gold standard for tooth replacement. They look and feel
-            like natural teeth and can last a lifetime with proper care — a permanent solution that lets
-            you regain a natural-looking, healthy and functional smile.
+            like natural teeth, and a permanent implant lets you regain a natural-looking, healthy and
+            functional smile. Each one has two simple parts:
           </p>
-          <p className="mt-4 text-[16.5px] leading-relaxed text-[#475569]">
-            Like your own teeth, implants stimulate the jaw and prevent bone loss. The benefits can last
-            a lifetime: firm, safe support for your teeth and protection against further bone loss.
-          </p>
-        </div>
 
-        <div className="grid gap-4">
-          {[
-            {
-              n: "1",
-              title: "The implant",
-              desc: "A small titanium post that replaces the root portion of your missing tooth, anchored securely in the jawbone.",
-              icon: Anchor,
-            },
-            {
-              n: "2",
-              title: "The crown",
-              desc: "The visible tooth above the gums — custom-crafted porcelain matched to your natural teeth in shape and shade.",
-              icon: Crown,
-            },
-          ].map((c) => (
-            <div
-              key={c.n}
-              data-testid={`implants-component-${c.n}`}
-              className="rounded-[24px] bg-white border border-slate-100 p-7 md:p-8 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.12)] flex items-start gap-5"
-            >
-              <span className="w-12 h-12 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center shrink-0">
-                <c.icon className="w-5 h-5" strokeWidth={1.75} />
-              </span>
-              <div>
-                <div className="font-mono text-[13px] tabular-nums text-[#0284C7] font-semibold">Part {c.n}</div>
-                <h3 className="mt-1 font-display text-[20px] font-semibold text-[#0A192F] leading-snug">{c.title}</h3>
-                <p className="mt-2 text-[14.5px] leading-relaxed text-[#64748B]">{c.desc}</p>
+          <div className="mt-8 grid gap-4">
+            {[
+              {
+                n: "1",
+                title: "The implant",
+                desc: "A small titanium post that replaces the root portion of your missing tooth, anchored securely in the jawbone.",
+                icon: Anchor,
+              },
+              {
+                n: "2",
+                title: "The crown",
+                desc: "The visible tooth above the gums — custom-crafted porcelain matched to your natural teeth in shape and shade.",
+                icon: Crown,
+              },
+            ].map((c) => (
+              <div
+                key={c.n}
+                data-testid={`implants-component-${c.n}`}
+                className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-6 md:p-7 flex items-start gap-5 hover:-translate-y-0.5 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.15)] transition-all duration-300"
+              >
+                <span className="w-12 h-12 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center shrink-0">
+                  <c.icon className="w-5 h-5" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <div className="font-mono text-[13px] tabular-nums text-[#0284C7] font-semibold">Part {c.n}</div>
+                  <h3 className="mt-1 font-display text-[20px] font-semibold text-[#0A192F] leading-snug">{c.title}</h3>
+                  <p className="mt-2 text-[14.5px] leading-relaxed text-[#64748B]">{c.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <p className="mt-6 text-[14.5px] leading-relaxed text-[#64748B] max-w-xl">
+            Like your own teeth, implants stimulate the jaw and prevent bone loss — firm, safe support
+            for your teeth with benefits that can last a lifetime.
+          </p>
         </div>
       </div>
     </section>
@@ -438,7 +438,7 @@ function WhatIsAnImplant() {
 function WhyReplace() {
   const ref = useReveal();
   return (
-    <section ref={ref} data-testid="implants-why-replace" className="reveal py-24 md:py-32 bg-white">
+    <section ref={ref} data-testid="implants-why-replace" className="reveal py-24 md:py-32 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="max-w-2xl mb-12 md:mb-16">
           <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
@@ -447,18 +447,37 @@ function WhyReplace() {
           <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
             One missing tooth <span className="font-light text-[#64748B]">rarely stays one problem.</span>
           </h2>
-          <p className="mt-5 text-[16.5px] leading-relaxed text-[#475569]">
-            Dr. Sarna considers all of these factors when determining how to achieve dental aesthetics
-            in harmony with your physiology — because a gap does more damage than most people expect.
-          </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Feature image tile */}
+          <div
+            data-testid="implants-consequence-feature"
+            className="relative rounded-[24px] overflow-hidden sm:col-span-2 lg:col-span-1 lg:row-span-2 min-h-[300px] group"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1000&q=80&auto=format&fit=crop"
+              alt="Dental model showing how a missing tooth affects neighbouring teeth"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/90 via-[#0A192F]/35 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-7 md:p-8 text-white">
+              <div className="font-display text-2xl md:text-[26px] leading-snug">
+                A gap does more damage than most people expect.
+              </div>
+              <p className="mt-3 text-[14px] leading-relaxed text-white/75">
+                Dr. Sarna considers all of these factors when determining how to achieve dental
+                aesthetics in harmony with your physiology.
+              </p>
+            </div>
+          </div>
+
           {consequences.map((s, i) => (
             <div
               key={s.title}
               data-testid={`implants-consequence-${i}`}
-              className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-7 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
+              className="rounded-[24px] bg-white border border-slate-100 p-7 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.12)] hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
             >
               <span className="w-11 h-11 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center">
                 <s.icon className="w-5 h-5" strokeWidth={1.75} />
@@ -476,7 +495,7 @@ function WhyReplace() {
 function Benefits() {
   const ref = useReveal();
   return (
-    <section ref={ref} data-testid="implants-benefits" className="reveal py-24 md:py-32 bg-[#F8FAFC]">
+    <section ref={ref} data-testid="implants-benefits" className="reveal py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="max-w-2xl mb-12 md:mb-16">
           <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
@@ -488,11 +507,28 @@ function Benefits() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {benefits.map((b, i) => (
+          {/* Stat tile */}
+          <div
+            data-testid="implants-benefit-stat"
+            className="rounded-[24px] bg-[#E6F8F3] p-7 md:p-8 flex flex-col justify-between min-h-[220px]"
+          >
+            <HeartPulse className="w-6 h-6 text-[#0284C7]" strokeWidth={1.75} />
+            <div>
+              <div className="font-display text-5xl md:text-6xl font-semibold text-[#0A192F] leading-none">
+                95%+
+              </div>
+              <div className="mt-2 text-[15px] font-medium text-[#0A192F]">ten-year success rate</div>
+              <p className="mt-1.5 text-[13.5px] leading-relaxed text-[#334155]/80">
+                With good oral hygiene and regular checkups, implants often last a lifetime.
+              </p>
+            </div>
+          </div>
+
+          {benefits.slice(0, 2).map((b, i) => (
             <div
               key={b.title}
               data-testid={`implants-benefit-${i}`}
-              className="rounded-[24px] bg-white border border-slate-100 p-7 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.12)] hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
+              className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-7 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
             >
               <span className="w-11 h-11 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center">
                 <b.icon className="w-5 h-5" strokeWidth={1.75} />
@@ -501,6 +537,40 @@ function Benefits() {
               <p className="mt-2 text-[14.5px] leading-relaxed text-[#64748B]">{b.desc}</p>
             </div>
           ))}
+
+          {benefits.slice(2).map((b, i) => (
+            <div
+              key={b.title}
+              data-testid={`implants-benefit-${i + 2}`}
+              className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-7 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <span className="w-11 h-11 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center">
+                <b.icon className="w-5 h-5" strokeWidth={1.75} />
+              </span>
+              <h3 className="mt-5 font-display text-[19px] font-semibold text-[#0A192F] leading-snug">{b.title}</h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-[#64748B]">{b.desc}</p>
+            </div>
+          ))}
+
+          {/* Image tile */}
+          <div
+            data-testid="implants-benefit-image"
+            className="relative rounded-[24px] overflow-hidden min-h-[220px] group"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1769559893692-c6d0623bf8e4?w=1000&q=80&auto=format&fit=crop"
+              alt="Patient smiling confidently after dental implant treatment"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/85 via-[#0A192F]/20 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+              <div className="font-display text-[21px] leading-snug">Confidence in every laugh</div>
+              <p className="mt-1.5 text-[13.5px] text-white/75 leading-relaxed">
+                Speak clearly, laugh comfortably and smile without thinking about it.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-4 rounded-[24px] bg-[#0A192F] text-white px-7 py-6">
@@ -526,7 +596,7 @@ function Benefits() {
 function TreatmentOptions() {
   const ref = useReveal();
   return (
-    <section ref={ref} data-testid="implants-options" className="reveal py-24 md:py-32 bg-white">
+    <section ref={ref} data-testid="implants-options" className="reveal py-24 md:py-32 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="max-w-2xl mb-12 md:mb-16">
           <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
@@ -542,45 +612,13 @@ function TreatmentOptions() {
             <div
               key={o.title}
               data-testid={`implants-option-${i}`}
-              className="relative rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-7 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] transition-all duration-300"
+              className="relative rounded-[24px] bg-white border border-slate-100 p-7 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.12)] hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] transition-all duration-300"
             >
               <div className="font-mono text-[13px] tabular-nums text-[#0284C7] font-semibold">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <h3 className="mt-3 font-display text-[19px] font-semibold text-[#0A192F] leading-snug">{o.title}</h3>
               <p className="mt-2.5 text-[14.5px] leading-relaxed text-[#64748B]">{o.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Process() {
-  const ref = useReveal();
-  return (
-    <section ref={ref} data-testid="implants-process" className="reveal py-24 md:py-32 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="max-w-2xl mb-12 md:mb-16">
-          <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
-            What actually happens
-          </div>
-          <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
-            Four clear steps <span className="font-light text-[#64748B]">to a new tooth.</span>
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {steps.map((s) => (
-            <div
-              key={s.step}
-              data-testid={`implants-step-${s.step}`}
-              className="relative rounded-[24px] bg-white border border-slate-100 p-7 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.12)]"
-            >
-              <div className="font-mono text-[13px] tabular-nums text-[#0284C7] font-semibold">{s.step}</div>
-              <h3 className="mt-3 font-display text-[19px] font-semibold text-[#0A192F] leading-snug">{s.title}</h3>
-              <p className="mt-2.5 text-[14.5px] leading-relaxed text-[#64748B]">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -787,11 +825,19 @@ export default function DentalImplants() {
       <Header />
       <main>
         <PageHero />
+        <Awards
+          eyebrow="Award-winning dentists in Milton"
+          title={
+            <>
+              Implant dentistry from an <span className="font-light text-[#64748B]">award-winning team.</span>
+            </>
+          }
+          subtitle="Dr. Sarna holds an ICOI Fellowship in Implantology, and our Milton clinic has earned 12 consecutive community awards from the Milton Champion, Hamilton Spectator and Three Best Rated."
+        />
         <WhatIsAnImplant />
         <WhyReplace />
         <Benefits />
         <TreatmentOptions />
-        <Process />
         <BeforeAfter />
         <WhyHere />
         <CostStrip />
