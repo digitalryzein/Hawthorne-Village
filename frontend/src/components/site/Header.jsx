@@ -53,7 +53,7 @@ export default function Header() {
           {/* Logo */}
           <a href="#top" data-testid="site-logo" className="flex items-center group">
             <img
-              src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt="Hawthorne Village Dental Care logo"
               className="h-9 md:h-11 w-auto object-contain"
             />

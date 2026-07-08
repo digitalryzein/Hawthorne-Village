@@ -87,7 +87,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <img
-                src={`${process.env.PUBLIC_URL}/images/logo.jpg`}
+                src={`${process.env.PUBLIC_URL}/images/logo.png`}
                 alt="Hawthorne Village Dental Care logo"
                 className="h-10 w-auto object-contain"
               />
