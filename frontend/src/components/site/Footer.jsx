@@ -85,12 +85,19 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10 md:gap-12 py-12 md:py-14">
           {/* Brand */}
           <div>
-            <div className="mb-4">
-              <div className="font-display font-semibold text-[#0A192F] text-[17px] leading-tight">
-                Hawthorne Village
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#0A192F] to-[#0284C7] flex items-center justify-center shadow-sm">
+                <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 5.5c-2-2-5-2-6.5 0-1.5 2-1 6 0 9s3 5 3 5c1 0 1.5-1.5 2-3 .5-1.5 1-2.5 1.5-2.5s1 1 1.5 2.5c.5 1.5 1 3 2 3 0 0 2-2 3-5s1.5-7 0-9c-1.5-2-4.5-2-6.5 0z" />
+                </svg>
               </div>
-              <div className="text-[11px] uppercase tracking-[0.14em] text-[#64748B] mt-0.5">
-                Dental Care · Milton
+              <div>
+                <div className="font-display font-semibold text-[#0A192F] text-[17px] leading-tight">
+                  Hawthorne Village
+                </div>
+                <div className="text-[11px] uppercase tracking-[0.14em] text-[#64748B]">
+                  Dental Care · Milton
+                </div>
               </div>
             </div>
             <p className="text-[14.5px] text-[#475569] leading-relaxed max-w-[280px]">
@@ -131,15 +138,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-5">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0A192F] to-[#0284C7] flex items-center justify-center">
-              <svg viewBox="0 0 24 24" className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 5.5c-2-2-5-2-6.5 0-1.5 2-1 6 0 9s3 5 3 5c1 0 1.5-1.5 2-3 .5-1.5 1-2.5 1.5-2.5s1 1 1.5 2.5c.5 1.5 1 3 2 3 0 0 2-2 3-5s1.5-7 0-9c-1.5-2-4.5-2-6.5 0z" />
-              </svg>
-            </div>
-            <div className="text-[13px] text-[#64748B]">
-              © {new Date().getFullYear()} Hawthorne Village Dental Care · Milton, ON
-            </div>
+          <div className="text-[13px] text-[#64748B]">
+            © {new Date().getFullYear()} Hawthorne Village Dental Care · Milton, ON
           </div>
 
           <div className="flex items-center gap-2">
