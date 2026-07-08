@@ -102,29 +102,42 @@ function ScrollRail({ items }) {
     };
     el.addEventListener("wheel", onWheel, { passive: false });
 
-    // Drag to scroll
+    // Drag to scroll. The drag only engages after the pointer moves a few
+    // pixels; capturing on pointerdown would swallow plain clicks on the
+    // cards (pointer capture retargets the click away from the <a>).
+    const DRAG_THRESHOLD = 6;
     let isDown = false;
+    let moved = false;
     let startX = 0;
     let startScroll = 0;
 
     const onDown = (e) => {
       isDown = true;
-      setDragging(true);
+      moved = false;
       startX = e.pageX;
       startScroll = el.scrollLeft;
-      el.setPointerCapture?.(e.pointerId);
       hardPause();
     };
     const onMove = (e) => {
       if (!isDown) return;
+      const dx = e.pageX - startX;
+      if (!moved) {
+        if (Math.abs(dx) < DRAG_THRESHOLD) return;
+        moved = true;
+        setDragging(true);
+        el.setPointerCapture?.(e.pointerId);
+      }
       e.preventDefault();
-      el.scrollLeft = startScroll - (e.pageX - startX);
+      el.scrollLeft = startScroll - dx;
     };
     const onUp = (e) => {
       if (!isDown) return;
       isDown = false;
+      if (moved) {
+        el.releasePointerCapture?.(e.pointerId);
+        moved = false;
+      }
       setDragging(false);
-      el.releasePointerCapture?.(e.pointerId);
       release();
     };
     el.addEventListener("pointerdown", onDown);
