@@ -416,23 +416,47 @@ function Credentials() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {credentials.map((c, i) => (
-            <div
-              key={c.title}
-              data-testid={`drsarna-credential-${i}`}
-              className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-7 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <span className="w-11 h-11 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center">
-                <c.icon className="w-5 h-5" strokeWidth={1.75} />
-              </span>
-              <div className="mt-5 font-mono text-[12px] tabular-nums uppercase tracking-wider text-[#0284C7] font-semibold">
-                {c.kicker}
-              </div>
-              <h3 className="mt-1.5 font-display text-[19px] font-semibold text-[#0A192F] leading-snug">{c.title}</h3>
-              <p className="mt-2 text-[14.5px] leading-relaxed text-[#64748B]">{c.desc}</p>
+        <div className="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-16 items-center">
+          {/* The actual wall of framed degrees at the clinic */}
+          <div className="relative">
+            <div className="relative rounded-[32px] overflow-hidden shadow-[0_30px_80px_-20px_rgba(10,25,47,0.3)] group">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/sarna-degrees.jpg`}
+                alt="Dr. Raju Sarna's framed degrees and certificates, including his University of California DDS and Royal College of Dental Surgeons of Ontario certificate"
+                loading="lazy"
+                className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/25 via-transparent to-transparent" />
             </div>
-          ))}
+            <div className="hidden md:flex absolute -bottom-6 left-6 items-center gap-3 bg-white rounded-2xl px-5 py-4 shadow-[0_20px_50px_-15px_rgba(10,25,47,0.25)] border border-slate-100">
+              <div className="w-10 h-10 rounded-xl bg-[#E6F8F3] flex items-center justify-center">
+                <GraduationCap className="w-5 h-5 text-[#0284C7]" strokeWidth={2} />
+              </div>
+              <div>
+                <div className="font-display font-semibold text-[#0A192F]">The wall says it best</div>
+                <div className="text-[13px] text-[#64748B]">his degrees, at the clinic</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-5">
+            {credentials.map((c, i) => (
+              <div
+                key={c.title}
+                data-testid={`drsarna-credential-${i}`}
+                className="rounded-[24px] bg-[#F8FAFC] border border-slate-100 p-6 md:p-7 hover:shadow-[0_20px_50px_-20px_rgba(10,25,47,0.2)] hover:-translate-y-1 transition-all duration-300"
+              >
+                <span className="w-11 h-11 rounded-2xl bg-[#E6F8F3] text-[#0284C7] flex items-center justify-center">
+                  <c.icon className="w-5 h-5" strokeWidth={1.75} />
+                </span>
+                <div className="mt-4 font-mono text-[12px] tabular-nums uppercase tracking-wider text-[#0284C7] font-semibold">
+                  {c.kicker}
+                </div>
+                <h3 className="mt-1.5 font-display text-[18px] font-semibold text-[#0A192F] leading-snug">{c.title}</h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#64748B]">{c.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
