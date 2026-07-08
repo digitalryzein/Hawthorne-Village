@@ -116,7 +116,7 @@ export default function WhyChoose() {
           </h2>
 
           <p className="mt-6 text-[16.5px] md:text-[17px] leading-relaxed text-[#475569] max-w-xl">
-            Hawthorne Village Dental Care is Milton&apos;s trusted family clinic — offering{" "}
+            Hawthorne Village Dental Care is one of the most trusted dental clinics in Milton, offering{" "}
             <a href="#services" className="text-[#0284C7] font-medium underline decoration-[#0284C7]/30 underline-offset-4 hover:decoration-[#0284C7]">
               children&apos;s dentistry
             </a>

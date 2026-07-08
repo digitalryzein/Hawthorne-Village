@@ -23,7 +23,7 @@ export default function VisitUs() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
           <div className="max-w-2xl">
             <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">
-              Visit our clinic
+              Visit our Milton dental clinic
             </div>
             <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
               We&apos;re right here, <span className="italic font-light text-[#64748B]">on Derry Road.</span>
@@ -31,7 +31,7 @@ export default function VisitUs() {
           </div>
           <p className="text-[16px] text-[#64748B] max-w-md">
             Free parking, ground-floor accessibility and easy access from anywhere
-            in Milton, Hawthorne Village, Beaty, Bronte Meadows and beyond.
+            in Milton, Hawthorne Village, Beaty, Bronte Meadows and beyond, so this dentist office is never far from home.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export default function VisitUs() {
           {/* Map */}
           <div className="relative rounded-[28px] overflow-hidden bg-white border border-slate-100 min-h-[420px] lg:min-h-[520px]">
             <iframe
-              title="Hawthorne Village Dental Care — 10220 Derry Rd #206, Milton, ON"
+              title="Hawthorne Village Dental Care, 10220 Derry Rd #206, Milton, ON"
               src={embedUrl}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

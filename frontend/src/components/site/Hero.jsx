@@ -32,13 +32,13 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display font-medium text-[42px] leading-[1.05] md:text-6xl md:leading-[1.02] text-[#0A192F] tracking-tight">
-              Milton&apos;s family dentist{" "}
-              <span className="italic font-light text-[#0284C7]">that finally</span> makes every visit comfortable.
+              Milton&apos;s most trusted dentist{" "}
+              <span className="italic font-light text-[#0284C7]">finally</span> makes every visit comfortable.
             </h1>
 
             <p className="mt-6 text-[17px] md:text-lg leading-relaxed text-[#475569] max-w-xl">
-              Gentle, modern dental care for children, adults and seniors — with evening hours,
-              same-day emergency slots, direct insurance billing and CDCP coverage. Right here on Derry Road.
+              Gentle, modern dental care for children, adults and seniors, with evening hours,
+              same-day emergency slots, direct billing and CDCP coverage. Right here on Derry Road, Milton.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">

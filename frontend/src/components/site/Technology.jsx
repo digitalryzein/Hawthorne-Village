@@ -19,7 +19,7 @@ export default function Technology() {
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-[#CBD5E1]">
             Every operatory at Hawthorne Village Dental Care is equipped with the tools that make a real difference
-            for patients — not shiny gadgets, but proven technology that reduces radiation, eliminates messy impressions
+            for patients. Not shiny gadgets, but proven technology that reduces radiation, eliminates messy impressions
             and often shortens two-visit treatments into one.
           </p>
 

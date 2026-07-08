@@ -184,8 +184,8 @@ export default function Services() {
             </h2>
           </div>
           <p className="text-[16px] text-[#64748B] max-w-md">
-            From your child&apos;s first check-up to a full smile makeover — every service you need,
-            delivered under one roof by a team that knows your name.
+            From your child&apos;s first check-up to a full smile makeover, our Milton dental clinic delivers
+            every service you need, under one roof, from a team that knows your name.
           </p>
         </div>
       </div>

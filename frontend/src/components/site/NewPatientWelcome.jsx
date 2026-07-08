@@ -6,7 +6,7 @@ import { useReveal } from "@/hooks/useReveal";
 const perks = [
   "Comprehensive new-patient exam & digital X-rays",
   "One-on-one time with Dr. Sarna to plan your care",
-  "Direct billing to your insurance — no paperwork",
+  "Direct billing to your insurance, no paperwork",
   "Same-week appointment guaranteed, or we call you first",
 ];
 
@@ -46,7 +46,7 @@ export default function NewPatientWelcome() {
 
               <p className="mt-5 text-[17px] text-[#475569] leading-relaxed max-w-lg">
                 We know finding a new dentist in Milton is a leap of faith. Come in for a
-                complimentary consultation — no pressure, no surprise bills. Just an honest
+                complimentary consultation, no pressure, no surprise bills. Just an honest
                 conversation about your smile.
               </p>
 

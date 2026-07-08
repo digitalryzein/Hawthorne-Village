@@ -1,5 +1,5 @@
 // Central data for the Hawthorne Village Dental Care homepage.
-// Content is written for real Milton, Ontario patients — never keyword-stuffed.
+// Content is written for real Milton, Ontario patients and never keyword-stuffed.
 
 export const clinic = {
   name: "Hawthorne Village Dental Care",
@@ -58,14 +58,14 @@ export const awards = [
 export const whyChoose = [
   {
     title: "Same-Day Emergency Care",
-    desc: "Toothache, chipped tooth or lost filling? We keep slots open every day for urgent issues — most patients are seen within hours, not days.",
+    desc: "Toothache, chipped tooth or lost filling? We keep slots open every day for urgent issues, and most patients are seen within hours, not days.",
     icon: "Ambulance",
     variant: "feature",
     image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1200&q=80&auto=format&fit=crop",
   },
   {
     title: "Evenings & Saturdays",
-    desc: "Open until 7 PM weekdays and 2 PM Saturdays — so busy families never skip work or school.",
+    desc: "Open until 7 PM weekdays and 2 PM Saturdays, so busy families never skip work or school.",
     icon: "Clock",
     variant: "mint",
     stat: "7 PM",
@@ -73,7 +73,7 @@ export const whyChoose = [
   },
   {
     title: "Direct Insurance Billing",
-    desc: "We bill your provider directly — no paperwork, no reimbursement wait.",
+    desc: "We bill your provider directly, no paperwork, no reimbursement wait.",
     icon: "ShieldCheck",
     variant: "icon",
   },
@@ -85,7 +85,7 @@ export const whyChoose = [
   },
   {
     title: "Comfort-First Sedation",
-    desc: "Oral sedation, The Wand painless anaesthesia and calming playlists — dentistry without the anxiety.",
+    desc: "Oral sedation, The Wand painless anaesthesia and calming playlists, dentistry without the anxiety.",
     icon: "HeartPulse",
     variant: "image",
     image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1000&q=80&auto=format&fit=crop",
@@ -105,7 +105,7 @@ export const whyChoose = [
   },
   {
     title: "Award-Winning Team",
-    desc: "Led by Dr. Raju Sarna — ICOI Fellow, trained at UCSF & UCLA.",
+    desc: "Led by Dr. Raju Sarna, ICOI Fellow, trained at UCSF & UCLA.",
     icon: "Award",
     variant: "quote",
   },
@@ -113,14 +113,14 @@ export const whyChoose = [
 
 export const services = [
   { name: "Dental Implants", blurb: "Permanent replacement teeth that look, feel and function like your own.", image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=75&auto=format&fit=crop" },
-  { name: "Invisalign", blurb: "Clear, removable aligners for adults and teens — straighter teeth in months, not years.", image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=75&auto=format&fit=crop" },
+  { name: "Invisalign", blurb: "Clear, removable aligners for adults and teens, straighter teeth in months, not years.", image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=75&auto=format&fit=crop" },
   { name: "Emergency Dentistry", blurb: "Same-day appointments for pain, swelling, broken teeth and lost fillings.", image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=75&auto=format&fit=crop" },
   { name: "Children's Dentistry", blurb: "Warm, unhurried visits that build lifelong healthy habits from age one.", image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=75&auto=format&fit=crop" },
   { name: "Cosmetic Dentistry", blurb: "Whitening, veneers and full smile makeovers designed around your face.", image: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=800&q=75&auto=format&fit=crop" },
   { name: "Root Canal Therapy", blurb: "Gentle, microscope-guided treatment that saves the tooth and stops the pain.", image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=75&auto=format&fit=crop" },
   { name: "Same-Day Crowns", blurb: "In-office CEREC crowns milled and fitted in a single visit.", image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=800&q=75&auto=format&fit=crop" },
   { name: "Bridges & Dentures", blurb: "Custom, comfortable and natural-looking replacements for missing teeth.", image: "https://images.unsplash.com/photo-1606811842497-25b3ad9c9bef?w=800&q=75&auto=format&fit=crop" },
-  { name: "Teeth Whitening", blurb: "Professional-grade whitening — safe, effective and dentist-supervised.", image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=75&auto=format&fit=crop" },
+  { name: "Teeth Whitening", blurb: "Professional-grade whitening, safe, effective and dentist-supervised.", image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=75&auto=format&fit=crop" },
   { name: "Sedation Dentistry", blurb: "Oral sedation options for patients who feel nervous about the chair.", image: "https://images.unsplash.com/photo-1666214277657-e2be8ec2087b?w=800&q=75&auto=format&fit=crop" },
   { name: "Wisdom Teeth", blurb: "Same-day surgical extraction with modern comfort protocols.", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=75&auto=format&fit=crop" },
   { name: "Preventive Care", blurb: "Cleanings, exams and early cavity detection with laser accuracy.", image: "https://images.unsplash.com/photo-1588776813755-9f74a97eea62?w=800&q=75&auto=format&fit=crop" },
@@ -158,11 +158,13 @@ export const insurers = [
 ];
 
 export const faqs = [
-  { q: "Are you accepting new patients in Milton?", a: "Yes — we welcome new patients of every age, from one-year-olds visiting for their first check-up to grandparents. Most new-patient appointments are available within a week." },
+  { q: "What makes Hawthorne Village Dental Care the best dental clinic in Milton?", a: "Patients point to the same things again and again: same-day emergency care, evening and Saturday hours, direct billing, CDCP acceptance, and a team led by an ICOI Fellow with over 25 years of experience. We're proud to be one of the top-rated dental clinics in Milton, with a 4.9 rating from more than 480 Google reviews." },
+  { q: "Are you accepting new patients in Milton?", a: "Yes, we welcome new patients of every age, from one-year-olds visiting for their first check-up to grandparents. Most new-patient appointments are available within a week." },
+  { q: "Do you accept walk-in patients or same-day emergencies?", a: "We don't operate as a walk-in dentist for routine visits, but we always hold same-day slots for dental emergencies. Call ahead and our front desk will fit you in as quickly as possible, often within hours." },
+  { q: "Are you a direct billing dentist near me?", a: "Yes. Hawthorne Village Dental Care bills almost every major Canadian insurer directly, including Manulife, Sun Life, Canada Life, GreenShield, Desjardins and Blue Cross. You only pay any portion your plan does not cover." },
   { q: "Do you accept the Canadian Dental Care Plan (CDCP)?", a: "Yes. Hawthorne Village Dental Care is a participating CDCP provider. Bring your CDCP welcome letter and Government of Canada Dental Benefits card to your appointment." },
-  { q: "Do you offer direct insurance billing?", a: "We bill almost every major Canadian insurer directly, including Manulife, Sun Life, Canada Life, GreenShield, Desjardins and Blue Cross. You only pay any portion your plan does not cover." },
   { q: "What if I have a dental emergency after hours?", a: "Call (905) 864-3368 and follow the after-hours prompt. We reserve same-day slots every weekday for pain, swelling and broken teeth." },
-  { q: "Where are you located in Milton?", a: "10220 Derry Road, Suite 206, Milton, ON L9T 7J3 — inside the Hawthorne Village medical complex, with free surface parking and elevator access." },
+  { q: "Where are you located in Milton?", a: "10220 Derry Road, Suite 206, Milton, ON L9T 7J3, inside the Hawthorne Village medical complex, with free surface parking and elevator access." },
   { q: "Do you see children? What age should the first visit be?", a: "Yes. The Canadian Dental Association recommends the first visit by age one, or within six months of the first tooth. Our team makes early visits fun, short and pressure-free." },
   { q: "How much does a dental implant cost in Milton?", a: "A single implant with crown at Hawthorne Village Dental Care typically ranges from $3,500 to $5,500 depending on bone quality and materials. We provide a written estimate before any treatment begins." },
   { q: "Is Invisalign more expensive than braces?", a: "For most adult cases the price is very similar. We offer 0% financing over 12–24 months so you can spread the cost." },
@@ -170,10 +172,10 @@ export const faqs = [
   { q: "Are digital X-rays safe?", a: "Digital X-rays use up to 90% less radiation than traditional film and are considered safe for children and pregnant patients when clinically indicated." },
   { q: "How long does a routine cleaning take?", a: "A standard hygiene visit runs 45–60 minutes. Your first visit takes about 90 minutes because we complete a comprehensive exam and digital records." },
   { q: "Can you help with a chipped or knocked-out tooth today?", a: "Call us immediately at (905) 864-3368. For a knocked-out permanent tooth, keep it moist (milk or saliva) and come in within 30 minutes for the best chance of saving it." },
-  { q: "Do you offer teeth whitening that actually works?", a: "Yes — in-office Zoom whitening lightens teeth up to 8 shades in one visit, and take-home custom trays maintain results for years." },
+  { q: "Do you offer teeth whitening that actually works?", a: "Yes, in-office Zoom whitening lightens teeth up to 8 shades in one visit, and take-home custom trays maintain results for years." },
   { q: "How long do dental implants last?", a: "With good oral hygiene and regular checkups, dental implants have a 95%+ ten-year success rate and often last a lifetime." },
-  { q: "What is the CEREC same-day crown process?", a: "We scan your tooth digitally, design the crown on-screen, mill it from a solid ceramic block, and bond it — all in about 90 minutes. No temporaries, no second visit." },
-  { q: "Do you treat sleep apnea?", a: "Yes. We provide custom oral appliances that reposition the jaw during sleep — a comfortable alternative to CPAP for mild to moderate cases." },
+  { q: "What is the CEREC same-day crown process?", a: "We scan your tooth digitally, design the crown on-screen, mill it from a solid ceramic block, and bond it, all in about 90 minutes. No temporaries, no second visit." },
+  { q: "Do you treat sleep apnea?", a: "Yes. We provide custom oral appliances that reposition the jaw during sleep, a comfortable alternative to CPAP for mild to moderate cases." },
   { q: "Do wisdom teeth always need to come out?", a: "No. If they erupt straight, have room and can be cleaned, they can stay. We evaluate every case individually with a 3D CBCT scan." },
   { q: "Is a root canal painful?", a: "Modern root canals feel very similar to a routine filling thanks to microscope guidance and effective anaesthesia. Most patients say the pain of the infection was far worse than the treatment." },
   { q: "How often should I see the dentist?", a: "Most healthy adults benefit from a cleaning and exam every 6 months. Patients with gum disease, orthodontics, implants or a higher cavity risk may need visits every 3–4 months." },
@@ -181,8 +183,8 @@ export const faqs = [
   { q: "Can I bring my baby or toddler with me to my appointment?", a: "Absolutely. Our waiting area has a small kids' corner, and our team is happy to hold your little one for a quick moment if needed." },
   { q: "Which neighbourhoods do you serve near Milton?", a: "We regularly welcome patients from Hawthorne Village, Beaty, Clarke, Ford, Coates, Willmott, Scott, Bronte Meadows, Campbellville and nearby Mississauga, Oakville and Burlington." },
   { q: "Is your clinic wheelchair accessible?", a: "Yes. Elevator access, wide doorways, an accessible washroom and level operatory floors throughout." },
-  { q: "Do you provide mouthguards for sports?", a: "Yes — custom-fitted mouthguards are stronger, more comfortable and better protection than boil-and-bite options." },
-  { q: "What languages does your team speak?", a: "Our team speaks English, French, Hindi, Punjabi, Urdu, Tagalog and Spanish — please let us know your preference when booking." },
+  { q: "Do you provide mouthguards for sports?", a: "Yes, custom-fitted mouthguards are stronger, more comfortable and better protection than boil-and-bite options." },
+  { q: "What languages does your team speak?", a: "Our team speaks English, French, Hindi, Punjabi, Urdu, Tagalog and Spanish. Please let us know your preference when booking." },
   { q: "How do I book an appointment?", a: "Click 'Book Appointment' on this site, call (905) 864-3368, or email hawthornedental1@gmail.com. We respond within one business hour." },
 ];
 
@@ -200,7 +202,7 @@ export const gallery = [
     id: "all-porcelain-crown",
     label: "All-Porcelain Crown",
     patient: "Brenda",
-    problem: "Brenda didn't like the appearance of the crown on her upper right incisor — it looked too opaque and had a dark shadow at the gum line.",
+    problem: "Brenda didn't like the appearance of the crown on her upper right incisor. It looked too opaque and had a dark shadow at the gum line.",
     solution: "The old crown was removed and replaced with a new all-porcelain crown that lets light pass through, eliminating the shadow.",
     before: "https://images.unsplash.com/photo-1581585504151-3d3e9cb32f65?w=900&q=80&auto=format&fit=crop",
     after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=900&q=80&auto=format&fit=crop",
@@ -210,7 +212,7 @@ export const gallery = [
     label: "Porcelain Veneers",
     patient: "Leslie",
     problem: "Leslie neglected her teeth while wearing braces, which left her with stained enamel. She wanted to improve her smile without returning to braces.",
-    solution: "Direct bonding on six upper teeth in a single visit masked the discolouration and reshaped teeth — a big boost to Leslie's smile and confidence.",
+    solution: "Direct bonding on six upper teeth in a single visit masked the discolouration and reshaped teeth, a big boost to Leslie's smile and confidence.",
     before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900&q=80&auto=format&fit=crop",
     after: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&q=80&auto=format&fit=crop",
   },
@@ -219,7 +221,7 @@ export const gallery = [
     label: "Tooth Whitening",
     patient: "Monique",
     problem: "Unhappy with the way her teeth had darkened over time, Monique wanted to bring back the whiteness of her smile.",
-    solution: "Upper and lower teeth were whitened using a take-home whitening system — dramatic results achieved in just two weeks.",
+    solution: "Upper and lower teeth were whitened using a take-home whitening system, with dramatic results achieved in just two weeks.",
     before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900&q=80&auto=format&fit=crop",
     after: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=80&auto=format&fit=crop",
   },

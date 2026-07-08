@@ -105,7 +105,7 @@ export default function Awards() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 mb-8 md:mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
         <div>
           <div className="text-[12px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-2">
-            Recognised in Milton
+            Award-winning dentists in Milton
           </div>
           <h2 className="font-display text-2xl md:text-3xl text-[#0A192F] tracking-tight leading-tight">
             A decade of awards from the community <span className="italic font-light text-[#64748B]">we serve.</span>
@@ -113,7 +113,7 @@ export default function Awards() {
         </div>
         <div className="text-[13px] text-[#64748B] max-w-sm">
           12 consecutive recognitions from the Milton Champion, Hamilton Spectator,
-          Three Best Rated and Opencare — voted by patients, not committees.
+          Three Best Rated and Opencare, voted by patients, not committees.
         </div>
       </div>
 

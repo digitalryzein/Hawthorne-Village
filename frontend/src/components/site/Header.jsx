@@ -28,7 +28,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 h-9 md:h-10 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 min-w-0">
             <AlertTriangle className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
-            <span className="truncate">Dental emergency? Same-day appointments available.</span>
+            <span className="truncate">Dental emergency? Walk-ins welcome, same-day appointments available.</span>
           </div>
           <a
             data-testid="emergency-call-link"

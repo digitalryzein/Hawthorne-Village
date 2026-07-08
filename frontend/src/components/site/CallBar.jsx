@@ -2,7 +2,7 @@ import { Phone, ArrowUpRight } from "lucide-react";
 import { clinic } from "@/lib/site-data";
 
 const items = [
-  { region: "Milton", label: "Need Dental Services in Milton?", phone: clinic.phone, href: clinic.phoneHref },
+  { region: "Milton", label: "Looking for a Dentist in Milton?", phone: clinic.phone, href: clinic.phoneHref },
   { region: "Halton", label: "Dental Emergency in Halton Region?", phone: clinic.phone, href: clinic.phoneHref },
 ];
 

@@ -2,9 +2,9 @@ import { Award, GraduationCap, Users, Sparkles } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
 const credentials = [
-  { icon: GraduationCap, label: "DDS — University of California, San Francisco (UCSF)" },
+  { icon: GraduationCap, label: "DDS, University of California, San Francisco (UCSF)" },
   { icon: Award, label: "ICOI Fellowship in Implantology" },
-  { icon: Sparkles, label: "UCLA — Advanced Education in General Dentistry (AEGD)" },
+  { icon: Sparkles, label: "UCLA, Advanced Education in General Dentistry (AEGD)" },
   { icon: Users, label: "25+ years restoring smiles for Milton families" },
 ];
 
@@ -18,7 +18,7 @@ export default function MeetDentist() {
           <div className="relative rounded-[32px] overflow-hidden shadow-[0_30px_80px_-20px_rgba(10,25,47,0.3)] aspect-[4/5] max-w-[520px]">
             <img
               src="https://images.pexels.com/photos/6812464/pexels-photo-6812464.jpeg"
-              alt="Dr. Raju Sarna — lead dentist at Hawthorne Village Dental Care in Milton"
+              alt="Dr. Raju Sarna, lead dentist at Hawthorne Village Dental Care in Milton"
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -37,9 +37,10 @@ export default function MeetDentist() {
             Precision, artistry <span className="italic font-light text-[#64748B]">and a genuinely kind chair-side manner.</span>
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-[#475569]">
-            Dr. Sarna is a recognized leader in cosmetic, restorative and implant dentistry — with an emphasis
-            on re-creating natural aesthetic beauty. His patients include prominent Milton and GTA
-            personalities, but you&apos;ll find him equally happy explaining a first filling to a nervous seven-year-old.
+            Dr. Sarna is a recognized leader in cosmetic, restorative and implant dentistry, with an emphasis
+            on re-creating natural aesthetic beauty. It's part of why patients often describe him as one of the
+            best dentists in Milton. His patients include prominent Milton and GTA personalities, but you&apos;ll
+            find him equally happy explaining a first filling to a nervous seven-year-old.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-[#475569]">
             Every treatment plan starts with a real conversation about what you want, what you can afford
