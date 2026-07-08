@@ -1,4 +1,5 @@
-import { Check, ArrowRight, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { Check, ArrowRight, Sparkles, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { clinic } from "@/lib/site-data";
 import { useReveal } from "@/hooks/useReveal";
@@ -10,12 +11,48 @@ const perks = [
   "A same-week appointment, guaranteed, or we call you first",
 ];
 
-const stats = [
-  { k: "$0", v: "New-patient consult" },
-  { k: "24 hr", v: "Booking response" },
-  { k: "6–24", v: "Month 0% financing" },
-  { k: "10k+", v: "Milton smiles" },
-];
+const VIDEO_ID = "22qqpeVLgBI";
+
+// Lightweight click-to-play embed: the YouTube iframe only loads once the
+// poster is clicked, keeping the homepage free of third-party requests.
+function WelcomeVideo() {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <div className="relative rounded-2xl overflow-hidden aspect-video bg-black/40 border border-white/10">
+      {playing ? (
+        <iframe
+          className="absolute inset-0 w-full h-full"
+          src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+          title="A tour of Hawthorne Village Dental Care with Dr. Raju Sarna"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      ) : (
+        <button
+          type="button"
+          data-testid="welcome-video-play"
+          onClick={() => setPlaying(true)}
+          aria-label="Play video: a tour of Hawthorne Village Dental Care"
+          className="group absolute inset-0 w-full h-full"
+        >
+          <img
+            src={`${process.env.PUBLIC_URL}/images/welcome-video-poster.jpg`}
+            alt="Dr. Raju Sarna welcoming new patients inside Hawthorne Village Dental Care"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+          />
+          <span className="absolute inset-0 bg-[#0A192F]/20 group-hover:bg-[#0A192F]/10 transition-colors" />
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-white/95 text-[#0A192F] shadow-[0_12px_32px_rgba(2,8,23,0.45)] flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Play className="w-6 h-6 md:w-7 md:h-7 ml-1 fill-current" />
+            </span>
+          </span>
+        </button>
+      )}
+    </div>
+  );
+}
 
 export default function NewPatientWelcome() {
   const ref = useReveal();
@@ -101,22 +138,7 @@ export default function NewPatientWelcome() {
                 <div className="text-[12px] uppercase tracking-[0.14em] text-[#7DD3FC] font-medium mb-5">
                   What you can expect
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  {stats.map((s, i) => (
-                    <div
-                      key={s.v}
-                      data-testid={`welcome-stat-${i}`}
-                      className="rounded-2xl bg-white/[0.04] border border-white/10 p-5 md:p-6"
-                    >
-                      <div className="font-display text-3xl md:text-4xl font-semibold text-white leading-none">
-                        {s.k}
-                      </div>
-                      <div className="mt-2 text-[13px] text-[#94A3B8] leading-tight">
-                        {s.v}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <WelcomeVideo />
 
                 <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between gap-4">
                   <div className="text-[13px] text-white/70 max-w-[220px] leading-relaxed">
