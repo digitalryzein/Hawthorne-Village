@@ -1,101 +1,31 @@
-import { Award, Trophy, Star, Medal, Sparkles, Crown } from "lucide-react";
-import { awards } from "@/lib/site-data";
+// Official certification and award logos, served from public/images/certifications.
+const logos = [
+  { src: "cert-01.png", alt: "Three Best Rated — Best Business of 2019 Excellence award, Dr. Raja Sama, DDS" },
+  { src: "cert-05.png", alt: "Three Best Rated — Top 3 Dentists in Milton 2018" },
+  { src: "cert-02.png", alt: "Milton Champion Readers' Choice Awards 2018 — Platinum winner" },
+  { src: "cert-03.png", alt: "Readers' Choice Awards 2018 — Diamond winner" },
+  { src: "cert-04.png", alt: "Readers' Choice Awards 2017 — Gold winner" },
+  { src: "cert-06.png", alt: "Readers' Choice Awards 2019 — Diamond winner" },
+  { src: "cert-07.png", alt: "Readers' Choice Awards 2020 — Diamond winner" },
+  { src: "cert-08.png", alt: "Readers' Choice Awards 2020 — Platinum winner" },
+  { src: "cert-09.png", alt: "Canadian Champion Readers' Choice Awards 2021 — Platinum winner" },
+  { src: "cert-10.png", alt: "The Champion Readers' Choice Awards 2022 — Gold winner" },
+  { src: "cert-11.png", alt: "Hamilton Spectator Readers' Choice Awards 2022 — Platinum winner" },
+];
 
-// Tier-driven design tokens. Each badge gets a unique premium palette
-// (ribbon, medallion + typography) — no images required.
-const tones = {
-  crimson: {
-    ring: "from-[#7F1D1D] to-[#DC2626]",
-    medal: "bg-gradient-to-br from-[#B91C1C] to-[#7F1D1D] text-white ring-[#FCA5A5]/40",
-    accent: "text-[#DC2626]",
-    icon: Trophy,
-    tierBg: "bg-[#FEE2E2] text-[#B91C1C]",
-  },
-  platinum: {
-    ring: "from-slate-300 to-slate-500",
-    medal: "bg-gradient-to-br from-slate-200 to-slate-400 text-slate-800 ring-slate-300/60",
-    accent: "text-slate-600",
-    icon: Medal,
-    tierBg: "bg-slate-100 text-slate-700",
-  },
-  diamond: {
-    ring: "from-[#0EA5E9] to-[#0284C7]",
-    medal: "bg-gradient-to-br from-[#38BDF8] to-[#0284C7] text-white ring-[#7DD3FC]/50",
-    accent: "text-[#0284C7]",
-    icon: Sparkles,
-    tierBg: "bg-[#E0F2FE] text-[#075985]",
-  },
-  gold: {
-    ring: "from-[#D97706] to-[#B45309]",
-    medal: "bg-gradient-to-br from-[#FBBF24] to-[#D97706] text-white ring-[#FCD34D]/50",
-    accent: "text-[#B45309]",
-    icon: Crown,
-    tierBg: "bg-[#FEF3C7] text-[#92400E]",
-  },
-  laurel: {
-    ring: "from-[#166534] to-[#14532D]",
-    medal: "bg-gradient-to-br from-[#22C55E] to-[#16A34A] text-white ring-[#86EFAC]/50",
-    accent: "text-[#16A34A]",
-    icon: Award,
-    tierBg: "bg-[#DCFCE7] text-[#166534]",
-  },
-  mint: {
-    ring: "from-[#0284C7] to-[#0369A1]",
-    medal: "bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] text-white ring-[#7DD3FC]/50",
-    accent: "text-[#0284C7]",
-    icon: Star,
-    tierBg: "bg-[#E6F8F3] text-[#0284C7]",
-  },
-};
-
-function AwardCard({ item }) {
-  const t = tones[item.tone] || tones.platinum;
-  const Icon = t.icon;
+function AwardLogo({ item }) {
   return (
-    <article
-      data-testid={`award-${item.year}-${item.tier.toLowerCase()}`}
-      className="shrink-0 w-[240px] md:w-[260px] group"
-    >
-      <div className="relative h-full rounded-2xl bg-white border border-slate-100 p-5 md:p-6 hover:-translate-y-1 hover:shadow-[0_18px_50px_-20px_rgba(10,25,47,0.2)] transition-all duration-300">
-        {/* Ribbon accent */}
-        <div className={`absolute top-0 left-6 right-6 h-[3px] rounded-b-full bg-gradient-to-r ${t.ring}`} />
-
-        <div className="flex items-start gap-4">
-          {/* Medallion */}
-          <div className={`w-14 h-14 rounded-full flex items-center justify-center shrink-0 ring-4 ${t.medal}`}>
-            <Icon className="w-6 h-6" strokeWidth={1.75} />
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <div className="text-[11px] uppercase tracking-[0.14em] text-[#94A3B8] font-medium truncate">
-              {item.publisher}
-            </div>
-            <div className="mt-1 font-display text-[17px] leading-tight font-semibold text-[#0A192F]">
-              {item.title}
-            </div>
-            <div className="mt-2 flex items-center gap-2">
-              <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-semibold ${t.tierBg}`}>
-                {item.tier}
-              </span>
-              <span className={`text-[13px] font-display font-medium ${t.accent}`}>{item.year}</span>
-            </div>
-          </div>
-        </div>
-
-        {item.note && (
-          <div className="mt-4 pt-3 border-t border-slate-100 text-[12px] text-[#64748B]">
-            {item.note}
-          </div>
-        )}
-      </div>
-    </article>
+    <img
+      src={`${process.env.PUBLIC_URL}/images/certifications/${item.src}`}
+      alt={item.alt}
+      loading="lazy"
+      draggable="false"
+      className="h-20 md:h-24 w-auto object-contain shrink-0 select-none"
+    />
   );
 }
 
 export default function Awards() {
-  // Duplicate the array so the CSS marquee loops seamlessly.
-  const track = [...awards, ...awards];
-
   return (
     <section
       id="awards"
@@ -117,11 +47,14 @@ export default function Awards() {
         </div>
       </div>
 
-      {/* Auto-scroller */}
+      {/* Auto-scroller — the track is duplicated so the CSS marquee loops seamlessly. */}
       <div className="relative">
-        <div className="flex gap-4 md:gap-5 animate-marquee-slow w-max px-6 md:px-8">
-          {track.map((a, i) => (
-            <AwardCard key={`${a.year}-${a.tier}-${i}`} item={a} />
+        <div className="flex items-center gap-10 md:gap-14 animate-marquee-slow w-max px-6 md:px-8">
+          {logos.map((item) => (
+            <AwardLogo key={item.src} item={item} />
+          ))}
+          {logos.map((item) => (
+            <AwardLogo key={`${item.src}-dup`} item={{ ...item, alt: "" }} />
           ))}
         </div>
         {/* Fade edges */}
