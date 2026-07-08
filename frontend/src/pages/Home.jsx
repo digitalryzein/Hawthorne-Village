@@ -27,8 +27,8 @@ export default function Home() {
         <CallBar />
         <Awards />
         <WhyChoose />
-        <MeetDentist />
         <Services />
+        <MeetDentist />
         <Technology />
         <SmileGallery />
         <NewPatientWelcome />
