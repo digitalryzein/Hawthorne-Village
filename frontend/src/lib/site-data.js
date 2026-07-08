@@ -186,7 +186,44 @@ export const faqs = [
 ];
 
 export const gallery = [
-  { before: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=75&auto=format&fit=crop", after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=600&q=75&auto=format&fit=crop", label: "Full Smile Makeover" },
-  { before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=75&auto=format&fit=crop", after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&q=75&auto=format&fit=crop", label: "Whitening + Bonding" },
-  { before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=75&auto=format&fit=crop", after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=600&q=75&auto=format&fit=crop", label: "Invisalign — 9 months" },
+  {
+    id: "makeover",
+    label: "Full Smile Makeover",
+    treatment: "Porcelain veneers + whitening",
+    duration: "3 visits · 5 weeks",
+    age: "42",
+    quote: "I finally smile in photos again.",
+    before: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    id: "whitening",
+    label: "Whitening + Bonding",
+    treatment: "Zoom whitening + composite bonding",
+    duration: "1 visit · 90 minutes",
+    age: "34",
+    quote: "8 shades brighter in a single afternoon.",
+    before: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    id: "invisalign",
+    label: "Invisalign Alignment",
+    treatment: "Clear aligners",
+    duration: "9 months · 34 trays",
+    age: "28",
+    quote: "Straight teeth without the metal.",
+    before: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1616391182219-e080b4d1043a?w=900&q=80&auto=format&fit=crop",
+  },
+  {
+    id: "implant",
+    label: "Single-Tooth Implant",
+    treatment: "Titanium implant + CEREC crown",
+    duration: "2 visits · 4 months",
+    age: "57",
+    quote: "I forget it isn&apos;t my real tooth.",
+    before: "https://images.unsplash.com/photo-1606811842497-25b3ad9c9bef?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=900&q=80&auto=format&fit=crop",
+  },
 ];
