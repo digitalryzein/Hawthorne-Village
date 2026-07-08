@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Calendar, Phone, ChevronRight, Clock, Search } from "lucide-react";
 import Header from "@/components/site/Header";
-import SocialProof from "@/components/site/SocialProof";
 import VisitUs from "@/components/site/VisitUs";
 import Footer from "@/components/site/Footer";
 import StickyActions from "@/components/site/StickyActions";
@@ -100,7 +99,6 @@ function PostCard({ p, large = false }) {
 }
 
 function BlogIndex() {
-  const ref = useReveal();
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState("All");
 
@@ -118,7 +116,7 @@ function BlogIndex() {
   const rest = featured ? filtered.slice(1) : filtered;
 
   return (
-    <section ref={ref} data-testid="blog-index" className="reveal pb-24 md:pb-28 bg-white">
+    <section data-testid="blog-index" className="pb-24 md:pb-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         {/* Search + filters */}
         <div className="flex flex-col md:flex-row md:items-center gap-4 mb-10">
@@ -254,7 +252,6 @@ export default function Blog() {
       <main>
         <Hero />
         <BlogIndex />
-        <SocialProof />
         <VisitUs />
       </main>
       <Footer />

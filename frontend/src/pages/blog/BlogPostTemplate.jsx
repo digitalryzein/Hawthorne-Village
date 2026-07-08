@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Calendar, Phone, ChevronRight, Clock, BadgeCheck, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/site/Header";
-import SocialProof from "@/components/site/SocialProof";
 import VisitUs from "@/components/site/VisitUs";
 import Footer from "@/components/site/Footer";
 import StickyActions from "@/components/site/StickyActions";
@@ -268,7 +267,6 @@ export default function BlogPostTemplate({ post }) {
           <PostFAQ post={post} />
         </article>
 
-        <SocialProof />
         <VisitUs />
       </main>
       <Footer />
