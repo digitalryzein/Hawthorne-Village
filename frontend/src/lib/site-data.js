@@ -199,8 +199,8 @@ export const gallery = [
     patient: "Myrna",
     problem: "Missing teeth on the upper left side with worn, discoloured teeth and an old bridge on the upper right. She wanted a new smile without a partial denture.",
     solution: "Recreated using implants on the upper left, new fixed bridges on the upper left and right, and veneers on her four front teeth.",
-    before: "https://images.unsplash.com/photo-1679911522750-aeedd9c88550?w=900&q=80&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&q=80&auto=format&fit=crop",
+    before: "https://images.unsplash.com/photo-1664529845848-00f5fa16df86?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1660732205495-f65510d8180e?w=900&q=80&auto=format&fit=crop",
   },
   {
     id: "all-porcelain-crown",
@@ -208,8 +208,8 @@ export const gallery = [
     patient: "Brenda",
     problem: "Brenda didn't like the appearance of the crown on her upper right incisor. It looked too opaque and had a dark shadow at the gum line.",
     solution: "The old crown was removed and replaced with a new all-porcelain crown that lets light pass through, eliminating the shadow.",
-    before: "https://images.unsplash.com/photo-1663182245833-7dd667277043?w=900&q=80&auto=format&fit=crop",
-    after: "https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?w=900&q=80&auto=format&fit=crop",
+    before: "https://images.unsplash.com/photo-1663182234283-28941e7612da?w=900&q=80&auto=format&fit=crop",
+    after: "https://images.unsplash.com/photo-1664529842504-5743d286ec1b?w=900&q=80&auto=format&fit=crop",
   },
   {
     id: "porcelain-veneers",
