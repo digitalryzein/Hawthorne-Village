@@ -4,10 +4,10 @@ import { clinic } from "@/lib/site-data";
 import { useReveal } from "@/hooks/useReveal";
 
 const perks = [
-  "Comprehensive new-patient exam & digital X-rays",
-  "One-on-one time with Dr. Sarna to plan your care",
-  "Direct billing to your insurance, no paperwork",
-  "Same-week appointment guaranteed, or we call you first",
+  "A full new-patient exam with digital X-rays",
+  "One-on-one time with Dr. Sarna to map out your care",
+  "Direct billing to your insurer, no paperwork",
+  "A same-week appointment, guaranteed, or we call you first",
 ];
 
 const stats = [
@@ -41,13 +41,13 @@ export default function NewPatientWelcome() {
 
               <h2 className="mt-6 font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
                 Your first visit,{" "}
-                <span className="italic font-light text-[#64748B]">on us.</span>
+                <span className="italic font-light text-[#64748B]">completely free.</span>
               </h2>
 
               <p className="mt-5 text-[17px] text-[#475569] leading-relaxed max-w-lg">
-                We know finding a new dentist in Milton is a leap of faith. Come in for a
-                complimentary consultation, no pressure, no surprise bills. Just an honest
-                conversation about your smile.
+                Choosing a new dentist in Milton is a big decision. Come in for a free consultation,
+                no pressure and no surprise bills, just an honest conversation about your smile and
+                what it actually needs.
               </p>
 
               <ul className="mt-8 space-y-3">

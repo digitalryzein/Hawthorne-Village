@@ -37,7 +37,7 @@ export default function SocialProof() {
           <div>
             <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">Patient stories</div>
             <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05] max-w-2xl">
-              Milton families keep coming back, <span className="italic font-light text-[#64748B]">and telling their friends.</span>
+              Milton keeps sending us <span className="italic font-light text-[#64748B]">their friends and family.</span>
             </h2>
           </div>
           <div className="flex items-center gap-2 text-sm text-[#475569]">

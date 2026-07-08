@@ -13,14 +13,14 @@ export default function Technology() {
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 grid lg:grid-cols-[1fr_1.05fr] gap-12 lg:gap-20 items-center">
         <div>
-          <div className="text-[13px] uppercase tracking-[0.14em] text-[#7DD3FC] font-medium mb-3">Modern technology</div>
+          <div className="text-[13px] uppercase tracking-[0.14em] text-[#7DD3FC] font-medium mb-3">Advanced dental technology</div>
           <h2 className="font-display text-3xl md:text-5xl tracking-tight leading-[1.05]">
-            Digital dentistry, <span className="italic font-light text-[#94A3B8]">so care is faster, quieter and gentler.</span>
+            The technology behind <span className="italic font-light text-[#94A3B8]">a gentler visit.</span>
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-[#CBD5E1]">
-            Every operatory at Hawthorne Village Dental Care is equipped with the tools that make a real difference
-            for patients. Not shiny gadgets, but proven technology that reduces radiation, eliminates messy impressions
-            and often shortens two-visit treatments into one.
+            Hawthorne Village Dental Care invests in state-of-the-art equipment so every visit is more precise
+            and less stressful. From 3D imaging to laser cavity detection, our tools reduce radiation, protect
+            your comfort and often turn two-visit treatments into one.
           </p>
 
           <div className="mt-8 relative rounded-[28px] overflow-hidden aspect-[4/3] max-w-[520px]">

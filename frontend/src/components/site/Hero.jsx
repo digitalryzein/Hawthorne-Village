@@ -32,13 +32,14 @@ export default function Hero() {
             </div>
 
             <h1 className="font-display font-medium text-[42px] leading-[1.05] md:text-6xl md:leading-[1.02] text-[#0A192F] tracking-tight">
-              Milton&apos;s most trusted dentist{" "}
-              <span className="italic font-light text-[#0284C7]">finally</span> makes every visit comfortable.
+              The dental clinic in Milton{" "}
+              <span className="italic font-light text-[#0284C7]">your whole family</span> can count on.
             </h1>
 
             <p className="mt-6 text-[17px] md:text-lg leading-relaxed text-[#475569] max-w-xl">
-              Gentle, modern dental care for children, adults and seniors, with evening hours,
-              same-day emergency slots, direct billing and CDCP coverage. Right here on Derry Road, Milton.
+              From a toddler&apos;s first check-up to a full smile makeover, we provide personalized,
+              high-quality dental care with evening hours, same-day emergency visits, direct billing
+              and CDCP coverage, right here on Derry Road.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">

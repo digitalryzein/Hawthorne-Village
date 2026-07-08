@@ -130,7 +130,7 @@ export default function SmileGallery() {
             </h2>
           </div>
           <p className="text-[14px] text-[#94A3B8] max-w-sm">
-            Real Milton patients treated at our Derry Road clinic. Drag the slider on each card
+            Actual patients treated at our Derry Road clinic. Drag the slider on each card
             to compare their before &amp; after.
           </p>
         </div>

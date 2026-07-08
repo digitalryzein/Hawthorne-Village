@@ -37,8 +37,8 @@ export default function Footer() {
             </h2>
 
             <p className="mt-5 text-[16px] text-[#475569] max-w-lg leading-relaxed">
-              Book online in 60 seconds, drop by our Derry Road clinic, or give us a call.
-              Our team answers in under a minute.
+              Book online in under a minute, stop by our Derry Road clinic, or give us a call.
+              Our team picks up fast.
             </p>
           </div>
 
@@ -93,8 +93,11 @@ export default function Footer() {
               />
             </div>
             <p className="text-[14.5px] text-[#475569] leading-relaxed max-w-[280px]">
-              A trusted dentist in Milton, Ontario since 2010. Gentle, modern care
+              One of Milton's trusted dental clinics since 2010, offering gentle, modern care
               for children, adults and seniors on Derry Road.
+            </p>
+            <p className="mt-3 text-[13px] italic text-[#94A3B8]">
+              Our passion is dentistry, our focus is you.
             </p>
           </div>
 

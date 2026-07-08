@@ -16,16 +16,16 @@ export default function Insurance() {
               Direct billing, CDCP <span className="italic font-light text-[#0A192F]/70">and flexible payment plans.</span>
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-[#334155]">
-              As a direct billing dentist near you, we bill your insurance directly, participate in the
-              Canadian Dental Care Plan (CDCP), and partner with financing providers so no family has to
-              postpone care because of cost.
+              We handle the paperwork so you don't have to. As a direct billing dentist in Milton, we bill
+              your provider directly, participate in the Canadian Dental Care Plan (CDCP), and offer
+              financing so cost never has to delay care.
             </p>
 
             <ul className="mt-7 space-y-3">
               {[
-                { icon: CheckCircle2, text: "Direct billing to every major Canadian insurer" },
-                { icon: Landmark, text: "CDCP-participating provider" },
-                { icon: CreditCard, text: "0% financing plans available for 6, 12 or 24 months" },
+                { icon: CheckCircle2, text: "Direct billing to nearly every Canadian insurer" },
+                { icon: Landmark, text: "CDCP-participating dentist" },
+                { icon: CreditCard, text: "0% financing for 6, 12 or 24 months" },
               ].map((f, i) => (
                 <li key={i} data-testid={`insurance-feature-${i}`} className="flex items-start gap-3 text-[15px] text-[#0A192F]">
                   <span className="mt-0.5 w-6 h-6 rounded-full bg-white text-[#10B981] flex items-center justify-center shrink-0">

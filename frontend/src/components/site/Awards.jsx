@@ -112,8 +112,8 @@ export default function Awards() {
           </h2>
         </div>
         <div className="text-[13px] text-[#64748B] max-w-sm">
-          12 consecutive recognitions from the Milton Champion, Hamilton Spectator,
-          Three Best Rated and Opencare, voted by patients, not committees.
+          12 consecutive awards from the Milton Champion, Hamilton Spectator, Three Best
+          Rated and Opencare, chosen by patients rather than committees.
         </div>
       </div>
 

@@ -180,12 +180,12 @@ export default function Services() {
               Complete dental care
             </div>
             <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
-              A dentist you&apos;ll never <span className="italic font-light text-[#64748B]">have to leave.</span>
+              Everything your smile needs, <span className="italic font-light text-[#64748B]">in one Milton clinic.</span>
             </h2>
           </div>
           <p className="text-[16px] text-[#64748B] max-w-md">
-            From your child&apos;s first check-up to a full smile makeover, our Milton dental clinic delivers
-            every service you need, under one roof, from a team that knows your name.
+            Whether it&apos;s a routine cleaning or a full smile makeover, our dental clinic in Milton
+            covers every stage of care, delivered by a team that already knows your name.
           </p>
         </div>
       </div>

@@ -20,8 +20,9 @@ export default function FinalCTA() {
           Your next smile <span className="italic font-light text-[#94A3B8]">starts with a hello.</span>
         </h2>
         <p className="mt-6 text-lg text-[#CBD5E1] max-w-2xl mx-auto leading-relaxed">
-          Whether it&apos;s your first check-up in years, a nervous child&apos;s first visit, or a full smile makeover,
-          we would love to meet you. New patients welcome. Same-day emergencies and walk-ins welcome.
+          Whether it&apos;s your first cleaning in years, your child&apos;s very first visit, or a complete
+          smile makeover, our Milton dental clinic is ready to help. New patients, same-day
+          emergencies and walk-ins are all welcome.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">

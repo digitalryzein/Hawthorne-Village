@@ -3,14 +3,14 @@ import { useReveal } from "@/hooks/useReveal";
 import { clinic } from "@/lib/site-data";
 
 const features = [
-  "Same-day emergency care",
-  "Evening & Saturday hours",
-  "Direct insurance billing",
-  "CDCP-participating provider",
-  "Comfort-first sedation options",
-  "3D CBCT & same-day crowns",
-  "Kids feel safe from age one",
-  "Award-winning team led by Dr. Sarna",
+  "Same-day emergency appointments",
+  "Evening and Saturday hours",
+  "Direct billing to your insurer",
+  "CDCP-participating dentist",
+  "Sedation options for nervous patients",
+  "3D CBCT scans and same-day crowns",
+  "A gentle first visit from age one",
+  "An ICOI Fellow leading your care",
 ];
 
 // Curved "15+ YEARS IN MILTON" text badge — pure SVG, no external asset.
@@ -107,16 +107,17 @@ export default function WhyChoose() {
         {/* RIGHT: copy */}
         <div className="order-1 lg:order-2">
           <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-4">
-            Why families choose us
+            Why Milton chooses us
           </div>
 
           <h2 className="font-display text-3xl md:text-5xl tracking-tight leading-[1.05]">
-            <span className="text-[#0A192F]">Everything a Milton family needs, </span>
-            <span className="text-[#0284C7]">under one roof.</span>
+            <span className="text-[#0A192F]">One dental clinic in Milton, </span>
+            <span className="text-[#0284C7]">every stage of your smile.</span>
           </h2>
 
           <p className="mt-6 text-[16.5px] md:text-[17px] leading-relaxed text-[#475569] max-w-xl">
-            Hawthorne Village Dental Care is one of the most trusted dental clinics in Milton, offering{" "}
+            Hawthorne Village Dental Care is one of the top-rated dental clinics in Milton, Ontario,
+            bringing together{" "}
             <a href="#services" className="text-[#0284C7] font-medium underline decoration-[#0284C7]/30 underline-offset-4 hover:decoration-[#0284C7]">
               children&apos;s dentistry
             </a>
@@ -132,7 +133,7 @@ export default function WhyChoose() {
             <a href="#services" className="text-[#0284C7] font-medium underline decoration-[#0284C7]/30 underline-offset-4 hover:decoration-[#0284C7]">
               emergency care
             </a>
-            . Led by Dr. Raju Sarna, ICOI Fellow, our team focuses on:
+            . Led by Dr. Raju Sarna, ICOI Fellow, our team is built around:
           </p>
 
           {/* Two-column checkmark list */}

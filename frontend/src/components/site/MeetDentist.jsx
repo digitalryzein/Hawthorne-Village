@@ -3,7 +3,7 @@ import { useReveal } from "@/hooks/useReveal";
 
 const credentials = [
   { icon: GraduationCap, label: "DDS, University of California, San Francisco (UCSF)" },
-  { icon: Award, label: "ICOI Fellowship in Implantology" },
+  { icon: Award, label: "ICOI Fellowship in Implantology, Orthodontics & General Dentistry" },
   { icon: Sparkles, label: "UCLA, Advanced Education in General Dentistry (AEGD)" },
   { icon: Users, label: "25+ years restoring smiles for Milton families" },
 ];
@@ -32,18 +32,18 @@ export default function MeetDentist() {
 
         {/* Bio */}
         <div>
-          <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">Meet your dentist</div>
+          <div className="text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium mb-3">Meet Dr. Sarna</div>
           <h2 className="font-display text-3xl md:text-5xl text-[#0A192F] tracking-tight leading-[1.05]">
-            Precision, artistry <span className="italic font-light text-[#64748B]">and a genuinely kind chair-side manner.</span>
+            Skilled hands, <span className="italic font-light text-[#64748B]">an even kinder chairside manner.</span>
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-[#475569]">
-            Dr. Sarna is a recognized leader in cosmetic, restorative and implant dentistry, with an emphasis
-            on re-creating natural aesthetic beauty. It's part of why patients often describe him as one of the
-            best dentists in Milton. His patients include prominent Milton and GTA personalities, but you&apos;ll
-            find him equally happy explaining a first filling to a nervous seven-year-old.
+            Dr. Sarna holds an ICOI Fellowship in Implantology, Orthodontics and General Dentistry, and is
+            recognized as a leader in cosmetic, restorative and implant dentistry with a focus on natural,
+            lasting results. It's a big reason patients across the GTA call him one of the best dentists in
+            Milton, though you'll find him just as happy explaining a first filling to a nervous seven-year-old.
           </p>
           <p className="mt-4 text-[17px] leading-relaxed text-[#475569]">
-            Every treatment plan starts with a real conversation about what you want, what you can afford
+            Every treatment plan starts with an honest conversation about what you want, what you can afford
             and what will actually make you smile more often. No pressure, ever.
           </p>
 

@@ -30,8 +30,8 @@ export default function VisitUs() {
             </h2>
           </div>
           <p className="text-[16px] text-[#64748B] max-w-md">
-            Free parking, ground-floor accessibility and easy access from anywhere
-            in Milton, Hawthorne Village, Beaty, Bronte Meadows and beyond, so this dentist office is never far from home.
+            Free parking, ground-floor access and an easy drive from Milton, Hawthorne Village,
+            Beaty, Bronte Meadows and every neighbourhood in between.
           </p>
         </div>
 
