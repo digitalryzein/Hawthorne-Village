@@ -109,6 +109,15 @@ body {
 }
 .animate-marquee-slow:hover { animation-play-state: paused; }
 
+/* Services marquee — even slower so the imagery can breathe */
+@keyframes services-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-services-marquee {
+    animation: services-marquee 80s linear infinite;
+}
+
 /* Fade-up reveal (uses IntersectionObserver in components) */
 .reveal {
     opacity: 0;
