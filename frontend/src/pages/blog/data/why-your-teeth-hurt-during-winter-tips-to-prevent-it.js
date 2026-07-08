@@ -1,0 +1,21 @@
+// Auto-extracted from the live site; content preserved verbatim.
+const post = {
+  "slug": "why-your-teeth-hurt-during-winter-tips-to-prevent-it",
+  "title": "Why Your Teeth Hurt During Winter & Tips to Prevent It",
+  "metaTitle": "Why Your Teeth Hurt During Winter & Tips to Prevent It | Hawthorne Village Dental",
+  "metaDescription": "",
+  "datePublished": "2018-12-06T10:00:04+00:00",
+  "dateModified": "2018-12-21T07:15:27+00:00",
+  "dateDisplay": "December 6, 2018",
+  "category": "Oral Health",
+  "readingMinutes": 3,
+  "words": 534,
+  "hero": "/images/blog/blog1sm.jpg",
+  "related": [
+    "/services/root-canal-therapy",
+    "/services/periodontal-gum-care"
+  ],
+  "contentHtml": "<p><img src=\"/images/blog/Why-Your-Teeth-Hurt-During-Winter-Tips-To-Prevent-It-700x441-1.jpeg\" alt=\"\" loading=\"lazy\" /></p><p>Are your teeth hurting or feeling more sensitive this winter? We take a look at what causes these common dental issues and effective ways to curb them.</p><p><strong>Possible reasons your teeth hurt during the cold season</strong></p><ul><li>Uneven contraction of teeth layers</li></ul><p>During the winter, the cold air getting into your mouth causes the different layers of your teeth to contract. In most cases, the speed at which the inner dentin and the outer enamel contracts varies thereby stressing your teeth. This can result in increased sensitivity and discomfort.</p><ul><li>Teeth grinding</li></ul><p>Another reason your teeth may be hurting more this winter is the wear and tear of the enamel caused by their constant chattering whenever you go outside. This means they lose the much-needed layer of protection and consequently expose them to external factors like infections and hard foods.</p><ul><li>Low levels of vitamin D</li></ul><p>Vitamin D is one of the vital elements that helps to keep your teeth healthy and strong. The primary source of this vitamin is the sun. Considering that there&#8217;s a limited supply of sunlight during the winter and the fact that you spend most of your days indoors, it’s likely that the reduced levels of Vitamin D will negatively impact the development of your teeth. To increase you vitamin D intake over the winter months, try adding more foods to your diet that contain Vitamin D, Such as salmon, canned tuna, mushrooms, shrimp and egg yolks, to name a few.</p><p><strong>How to reduce tooth pain during winter</strong></p><ul><li>Breath through the nose</li></ul><p>This may sound like a no-brainer, but it’s arguably one of the most effective tips to reduce toothaches triggered by cold weather. The end goal is to keep your teeth warm and minimize uneven contractions of their layers. You can also choose to wear a scarf around your mouth or take hot beverages and water to keep warm.</p><ul><li>Change your toothpaste and toothbrush</li></ul><p>For proper dental hygiene, it is recommended that you change your toothbrush at least once every 2-3 months. For sensitive teeth, consider switching to a different style of toothbrush and choose a soft bristle brush.<br /> Other effective ways of reducing toothaches triggered by cold air during winter include using desensitizing toothpastes and rinsing with a fluoride mouthwash a few times a week.</p><ul><li>Talk to a dentist</li></ul><p>As a general rule, it’s important to visit a dentist at least once a year; more is recommended when battling dental conditions like sensitive or painful teeth during winter.<br /> Remember, never take any teeth problem that lasts more than a few days too lightly as it could be signifying a bigger underlying issue. Feel free to book a free consultation with us at Hawthorne Village Dental Care immediately if you identify a problem. This way, we can easily determine the problem and take the next steps to treat what could have otherwise turned out to be a serious condition.</p><div class=\"cta-callout\"><strong>Book an appointment with the best family dentist in Milton, ON</strong><br /> If you have any questions regarding tooth pain during winter or would like to schedule an appointment, contact us at 905-864-3368 or through our email <a href=\"mailto:hawthornedental1@gmail.com\">hawthornedental1@gmail.com</a>.<br /> Our aim is to help you maintain a healthy smile this winter and beyond.</div>"
+};
+
+export default post;

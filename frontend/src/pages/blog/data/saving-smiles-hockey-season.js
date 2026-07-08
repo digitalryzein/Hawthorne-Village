@@ -1,0 +1,20 @@
+// Auto-extracted from the live site; content preserved verbatim.
+const post = {
+  "slug": "saving-smiles-hockey-season",
+  "title": "How We’re Saving Smiles This Hockey Season",
+  "metaTitle": "How We're Saving Smiles This Hockey Season | Hawthorne Village Dental",
+  "metaDescription": "If you live in Ontario, you’ve got to love hockey! But the rough and tumble sport can be hard on the players, not to mention their teeth. One of the most i…",
+  "datePublished": "2018-01-25T16:46:13+00:00",
+  "dateModified": "2018-12-17T21:56:54+00:00",
+  "dateDisplay": "January 25, 2018",
+  "category": "Dentistry Articles",
+  "readingMinutes": 3,
+  "words": 501,
+  "hero": "/images/blog/jan25.jpg",
+  "related": [
+    "/services/sports-mouthguards"
+  ],
+  "contentHtml": "<p>If you live in Ontario, you’ve got to love hockey! But the rough and tumble sport can be hard on the players, not to mention their teeth. One of the most important pieces of protective equipment that a hockey team can have is a durable, high quality <a href=\"https://www.webmd.com/oral-health/guide/mouth-guards\" target=\"_blank\" rel=\"noopener\">mouthguard</a>.<br /> Mouthguards, it turns out, can do more than just prevent busted lips and broken teeth; they can also reduce the risk of injuries like concussions in some cases. It’s no wonder why they’re a mandatory piece of equipment for so many high school, collegiate, and professional athletes.<br /> That’s why <a href=\"/\">Hawthorne Village Dental Care</a> is happy to announce that we’re a sponsor of the <a href=\"https://miltonwinterhawks.com/\" target=\"_blank\" rel=\"noopener\">Milton Winterhawks</a> AE Minor Bantam Blue hockey team. We fitted each of the players with professional mouthguards for the 2017-18 season. Now our favorite players can play hard, work hard, and rest assured knowing that they’ve protected themselves as best as possible from common orofacial injuries during their games.</p><h2>What Makes a Professional Mouthguard Different?</h2><p>While a mouthguard is an important part of every hockey team’s protective gear, not all of them are created equal. Most people opt for an affordable over-the-counter option that’s sold in the supermarket. These guards are one-size and loosely fitted, so that more people can wear them. Unfortunately, this prevents a secure fit. If someone is elbowed, hit, or falls, the mouthguard can slip right out and won’t protect the player. Even if it stays in place, the loose fit can still mean lacerations or broken teeth. When it comes to talking to teammates or staying hydrated, most players take the stock guards out, because they’re too difficult to work with.<br /> Professionally made mouthguard like the ones here at Hawthorne Village Dental Care are created using precise models of each player’s teeth. First, we took an impression of every Milton Winterhawks AE Minor Bantam Blue hockey player’s mouth. Then we poured a special type of stone mixture into the impression, creating a replica of their unique oral anatomy. Finally, the mouthguard materials are melted directly over the model and trimmed/shaped/smoothed for a perfect contour.<br /> When someone wears a custom fitted guard, it’s more comfortable. But it also stays in place when you need it to (and won’t slip around — it fits just like a glove!) If a player gets hit, and falls to the ice, a custom mouthguard will protect them during both the initial and the secondary hits, not fall off between them the way a loosely made tray would. When someone does get hurt or injured, our guards help protect your teeth to keep the trauma to a minimum.</p><h3>Insurance for Your Athlete’s Smile!</h3><div class=\"cta-callout\">Wearing an athletic mouthguard is one of the best ways to protect you or your child’s smile during athletic activities, whether it’s hockey, baseball, wrestling, or anything else. They can even be customized to match your team colors or jersey. If you have any more questions, please be sure to call Hawthorne Village Dental Care at 905-864-3368.</div>"
+};
+
+export default post;

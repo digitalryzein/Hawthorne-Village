@@ -1,0 +1,20 @@
+// Auto-extracted from the live site; content preserved verbatim.
+const post = {
+  "slug": "spring-cleaning-benefits-regular-prophylactic-appointments",
+  "title": "Spring Cleaning: The Benefits of Regular Prophylactic Appointments",
+  "metaTitle": "Spring Cleaning: The Benefits of Regular Prophylactic Appointments | Hawthorne Village Dental",
+  "metaDescription": "You have great teeth, healthy gums, and have gone through most of your life without having to worry about a lot of dental problems. When your schedule gets…",
+  "datePublished": "2018-05-17T16:43:19+00:00",
+  "dateModified": "2018-12-17T20:59:01+00:00",
+  "dateDisplay": "May 17, 2018",
+  "category": "Dentistry Articles",
+  "readingMinutes": 3,
+  "words": 504,
+  "hero": "/images/blog/Screen-Shot-2018-05-17-at-12.54.55-PM-750x500.png",
+  "related": [
+    "/services/periodontal-gum-care"
+  ],
+  "contentHtml": "<p>You have great teeth, healthy gums, and have gone through most of your life without having to worry about a lot of dental problems. When your schedule gets busy, you contemplate skipping your next dental checkup. “I’ve got good teeth,” you think to yourself, “maybe I don’t really need to see the dentist twice a year after all.”<br /> The truth is, it’s preventive dental care that helps you to keep your smile healthy in the first place!<br /> Thanks to routine dental checkups and cleanings, our <a href=\"/\">Milton dentist</a> can help you pinpoint risk factors earlier on to reverse them or prevent them from getting worse.<br /> Here are just a few of the things that we check for during your routine visit:</p><ul><li>Tooth decay</li><li>Gum disease</li><li>Bone loss</li><li>Oral cancer</li><li>Changes in tooth alignment</li><li>Medical conditions linked with dental disease</li></ul><h2><strong>Prevent Gum Disease Before It Starts</strong></h2><p>Did you know that periodontal (gum) disease is the leading cause of adult tooth loss? Although some people are more likely to develop gum infections than others (it can run in families) the best way to prevent it is by scheduling regular cleanings every six months.<br /> When you’re at our Milton office, we’ll clean away loose plaque biofilm as well as calcified tartar that has accumulated between your cleaning appointments. Tartar tends to build up along the gumlines and on curved tooth surfaces just under the gums. Unfortunately, it’s not possible to brush or floss it away and even people with excellent oral hygiene tend to get some buildup between appointments.<br /> If you skip just one dental checkup, the tartar goes untouched. As it harbours infectious bacteria, you can start to see swelling, redness, bleeding, and even begin to lose bone around the affected teeth.<br /> <a href=\"/periodontal\">Periodontal disease</a> isn’t reversible, but it is preventable. If you plan on keeping your smile for life, then you’ll want to see our Milton dentist at least every six months!</p><h3>There’s No Time Like the Present</h3><p>By now, your New Year’s Resolutions have either stuck or become an afterthought, but Spring brings along the urge to tidy up and clean out things that are in the way. A spring cleaning for your smile is a great choice to jump start your youthful glow before summer arrives. While you’re here, ask about other ways to spruce up your teeth, like our professional teeth whitening treatment</p><h3>Your Comfort Comes First</h3><p>One of the main reasons so many people don’t go to the dentist regularly is because of anxiety and dental phobia. If you’ve had a bad experience somewhere in the past, <a href=\"/dr-sarna\">Dr. Raju Sarna</a> wants to know how he can help you change the way you feel about going to the dentist. By communicating with you closely, we can ensure that your checkup and cleaning is as comfortable as possible.</p><div class=\"cta-callout\"><a href=\"/contact-us\">Contact Hawthorne Village Dental Care</a> today to schedule your next checkup. Even if it’s been a few years since your last dental cleaning, there’s never been a better time to get your oral health back in check!</div>"
+};
+
+export default post;

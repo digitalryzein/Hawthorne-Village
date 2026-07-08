@@ -14,6 +14,7 @@ const aboutLinks = [
 ];
 
 const navLinks = [
+  { href: `${HOME}blog`, label: "Blog" },
   { href: `${HOME}#reviews`, label: "Reviews" },
   { href: `${HOME}#faq`, label: "FAQ" },
   { href: `${HOME}contact`, label: "Contact" },

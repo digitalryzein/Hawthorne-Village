@@ -6,8 +6,9 @@ import Technology from "@/pages/Technology";
 import OurTeam from "@/pages/OurTeam";
 import PatientForms from "@/pages/PatientForms";
 import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
 import ServicePage from "@/pages/services/ServicePage";
-import TechPage from "@/pages/technology/TechPage";
+import RootSlug from "@/pages/RootSlug";
 import { Toaster } from "sonner";
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
           <Route path="/our-team" element={<OurTeam />} />
           <Route path="/patient-forms" element={<PatientForms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/services/:slug" element={<ServicePage />} />
-          {/* Technology pages live at root-level slugs to preserve the existing URL structure. */}
-          <Route path="/:slug" element={<TechPage />} />
+          {/* Technology pages and blog posts live at root-level slugs, matching the live site. */}
+          <Route path="/:slug" element={<RootSlug />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" richColors closeButton />
