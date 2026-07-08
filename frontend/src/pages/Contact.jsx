@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import Header from "@/components/site/Header";
 import SocialProof from "@/components/site/SocialProof";
-import FinalCTA from "@/components/site/FinalCTA";
 import VisitUs from "@/components/site/VisitUs";
 import Footer from "@/components/site/Footer";
 import StickyActions from "@/components/site/StickyActions";
@@ -330,7 +329,6 @@ export default function Contact() {
         <ContactMain />
         <EmergencyAndInsurance />
         <SocialProof />
-        <FinalCTA />
         <VisitUs />
       </main>
       <Footer />
