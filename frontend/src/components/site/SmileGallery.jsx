@@ -129,13 +129,14 @@ export default function SmileGallery() {
               <span className="italic font-light text-[#64748B]">real transformations.</span>
             </h2>
           </div>
-          <p className="text-[14px] text-[#94A3B8] max-w-xs">
-            Drag the slider on each card to compare before &amp; after.
+          <p className="text-[14px] text-[#94A3B8] max-w-sm">
+            Real Milton patients treated at our Derry Road clinic. Drag the slider on each card
+            to compare their before &amp; after.
           </p>
         </div>
 
         {/* 2-up grid of horizontal sliders */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
           {gallery.map((g, i) => (
             <div
               key={g.id}
@@ -143,22 +144,39 @@ export default function SmileGallery() {
               className="flex flex-col"
             >
               <HorizontalSlider item={g} />
-              <div className="mt-5 flex items-baseline justify-between gap-4">
-                <div>
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-mono text-[12px] tabular-nums text-[#94A3B8]">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <h3 className="font-display text-lg md:text-xl font-semibold text-[#0A192F] leading-tight">
-                      {g.label}
-                    </h3>
-                  </div>
-                  <div className="mt-1 text-[13px] text-[#64748B]">{g.treatment}</div>
-                </div>
-                <div className="text-[12px] uppercase tracking-wider text-[#94A3B8] whitespace-nowrap">
-                  {g.duration}
-                </div>
+
+              {/* Case heading */}
+              <div className="mt-6 flex items-baseline gap-3">
+                <span className="font-mono text-[12px] tabular-nums text-[#94A3B8]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display text-xl md:text-2xl font-semibold text-[#0A192F] leading-tight">
+                  {g.label}
+                </h3>
               </div>
+              <div className="mt-1 text-[13px] uppercase tracking-[0.14em] text-[#0284C7] font-medium">
+                Patient · {g.patient}
+              </div>
+
+              {/* Problem / Solution */}
+              <dl className="mt-5 space-y-4 border-l border-slate-200 pl-5">
+                <div>
+                  <dt className="text-[11px] uppercase tracking-[0.14em] text-[#94A3B8] font-medium">
+                    Problem
+                  </dt>
+                  <dd className="mt-1 text-[14.5px] text-[#475569] leading-relaxed">
+                    {g.problem}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[11px] uppercase tracking-[0.14em] text-[#10B981] font-medium">
+                    Solution
+                  </dt>
+                  <dd className="mt-1 text-[14.5px] text-[#334155] leading-relaxed">
+                    {g.solution}
+                  </dd>
+                </div>
+              </dl>
             </div>
           ))}
         </div>
