@@ -2,13 +2,17 @@ import { useState, useEffect } from "react";
 import { Menu, Phone, X, Calendar, AlertTriangle } from "lucide-react";
 import { clinic } from "@/lib/site-data";
 
+// Anchors are prefixed with the app root so they also work from inner pages
+// (e.g. /services/root-canal-therapy), not just the homepage.
+const HOME = `${process.env.PUBLIC_URL}/`;
+
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#dentist", label: "Dr. Sarna" },
-  { href: "#technology", label: "Technology" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: `${HOME}#services`, label: "Services" },
+  { href: `${HOME}#dentist`, label: "Dr. Sarna" },
+  { href: `${HOME}#technology`, label: "Technology" },
+  { href: `${HOME}#reviews`, label: "Reviews" },
+  { href: `${HOME}#faq`, label: "FAQ" },
+  { href: `${HOME}#contact`, label: "Contact" },
 ];
 
 export default function Header() {
@@ -51,7 +55,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo */}
-          <a href="#top" data-testid="site-logo" className="flex items-center group">
+          <a href={`${HOME}#top`} data-testid="site-logo" className="flex items-center group">
             <img
               src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt="Hawthorne Village Dental Care logo"

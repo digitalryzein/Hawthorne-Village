@@ -4,15 +4,19 @@ import { clinic } from "@/lib/site-data";
 const directionsUrl =
   "https://www.google.com/maps/place/10220+Derry+Rd+%23206,+Milton,+ON+L9T+7J3";
 
+// Anchors are prefixed with the app root so they also work from inner pages.
+const HOME = `${process.env.PUBLIC_URL}/`;
+
 const quickLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Dr. Sarna", href: "#dentist" },
-  { label: "Technology", href: "#technology" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Smile Gallery", href: "#gallery" },
-  { label: "FAQ", href: "#faq" },
-  { label: "New Patients", href: "#new-patients" },
-  { label: "Visit Us", href: "#visit" },
+  { label: "Services", href: `${HOME}#services` },
+  { label: "Dr. Sarna", href: `${HOME}#dentist` },
+  { label: "Technology", href: `${HOME}#technology` },
+  { label: "Reviews", href: `${HOME}#reviews` },
+  { label: "Smile Gallery", href: `${HOME}#gallery` },
+  { label: "FAQ", href: `${HOME}#faq` },
+  { label: "New Patients", href: `${HOME}#new-patients` },
+  { label: "Root Canal Therapy", href: `${HOME}services/root-canal-therapy` },
+  { label: "Visit Us", href: `${HOME}#visit` },
 ];
 
 export default function Footer() {

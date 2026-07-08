@@ -44,6 +44,10 @@ jobs:
           PUBLIC_URL: /Hawthorne-Village
         run: npm run build
 
+      - name: SPA fallback for deep links
+        working-directory: frontend
+        run: cp build/index.html build/404.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/build

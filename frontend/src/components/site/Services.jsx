@@ -6,7 +6,7 @@ import { useReveal } from "@/hooks/useReveal";
 function ServiceCard({ s }) {
   return (
     <a
-      href="#contact"
+      href={s.href ? `${process.env.PUBLIC_URL}${s.href}` : "#contact"}
       data-testid={`service-card-${s.name.replace(/\s+/g, "-").toLowerCase()}`}
       onDragStart={(e) => e.preventDefault()}
       className="group relative shrink-0 w-[300px] md:w-[340px] rounded-[28px] overflow-hidden bg-white border border-slate-100 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.15)] hover:shadow-[0_25px_60px_-20px_rgba(10,25,47,0.3)] hover:-translate-y-2 transition-all duration-500 ease-out select-none"
