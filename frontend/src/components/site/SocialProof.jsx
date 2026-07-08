@@ -99,13 +99,15 @@ export default function SocialProof() {
 
   const measure = useCallback(() => {
     const el = trackRef.current;
-    if (!el) return;
-    setPages(Math.max(1, Math.ceil(el.scrollWidth / el.clientWidth)));
+    // clientWidth can be 0 mid-layout; dividing by it yields Infinity and
+    // Array.from({ length: Infinity }) throws, so bail until it's measurable.
+    if (!el || !el.clientWidth) return;
+    setPages(Math.max(1, Math.min(20, Math.ceil(el.scrollWidth / el.clientWidth))));
     setPage(Math.min(pagesFrom(el), Math.round(el.scrollLeft / el.clientWidth)));
   }, []);
 
   function pagesFrom(el) {
-    return Math.max(0, Math.ceil(el.scrollWidth / el.clientWidth) - 1);
+    return Math.max(0, Math.min(19, Math.ceil(el.scrollWidth / el.clientWidth) - 1));
   }
 
   useEffect(() => {
