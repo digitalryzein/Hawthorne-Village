@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, Phone, X, Calendar, AlertTriangle, ChevronDown, ChevronRight } from "lucide-react";
 import { clinic, services } from "@/lib/site-data";
+import { technologies } from "@/lib/technology-data";
 
 // Anchors are prefixed with the app root so they also work from inner pages
 // (e.g. /services/root-canal-therapy), not just the homepage.
@@ -8,7 +9,6 @@ const HOME = `${process.env.PUBLIC_URL}/`;
 
 const navLinks = [
   { href: `${HOME}dr-sarna`, label: "Dr. Sarna" },
-  { href: `${HOME}#technology`, label: "Technology" },
   { href: `${HOME}#reviews`, label: "Reviews" },
   { href: `${HOME}#faq`, label: "FAQ" },
   { href: `${HOME}#contact`, label: "Contact" },
@@ -16,6 +16,7 @@ const navLinks = [
 
 // Services with their own page link there; the rest point at the services rail.
 const serviceHref = (s) => (s.href ? `${process.env.PUBLIC_URL}${s.href}` : `${HOME}#services`);
+const techHref = (t) => `${process.env.PUBLIC_URL}${t.href}`;
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -109,6 +110,47 @@ export default function Header() {
               </div>
             </div>
 
+            {/* Technology dropdown */}
+            <div className="relative group">
+              <a
+                href={`${HOME}technology`}
+                data-testid="nav-technology"
+                className="inline-flex items-center gap-1 text-sm font-medium text-[#334155] hover:text-[#0A192F] transition-colors py-2"
+              >
+                Technology
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+              </a>
+
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200">
+                <div
+                  data-testid="technology-dropdown"
+                  className="w-[560px] rounded-[24px] bg-white border border-slate-100 shadow-[0_30px_80px_-20px_rgba(10,25,47,0.25)] p-5"
+                >
+                  <div className="px-3 pb-3 mb-2 border-b border-slate-100 flex items-baseline justify-between">
+                    <span className="text-[11px] uppercase tracking-[0.14em] text-[#94A3B8] font-medium">
+                      Our technology
+                    </span>
+                    <a href={`${HOME}technology`} className="text-[12px] font-medium text-[#0284C7] hover:text-[#0A192F] transition-colors">
+                      View all
+                    </a>
+                  </div>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
+                    {technologies.map((t) => (
+                      <a
+                        key={t.name}
+                        href={techHref(t)}
+                        data-testid={`dropdown-tech-${t.name.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`}
+                        className="group/item flex items-center gap-2 rounded-xl px-3 py-2 text-[13.5px] text-[#334155] hover:bg-[#F1F7FD] hover:text-[#0A192F] transition-colors"
+                      >
+                        <ChevronRight className="w-3.5 h-3.5 text-[#0284C7] shrink-0 group-hover/item:translate-x-0.5 transition-transform" />
+                        {t.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -173,6 +215,38 @@ export default function Header() {
                     >
                       <ChevronRight className="w-3 h-3 text-[#0284C7] shrink-0" />
                       {s.name}
+                    </a>
+                  ))}
+                </div>
+              </details>
+
+              {/* Technology collapsible */}
+              <details className="border-b border-slate-100">
+                <summary
+                  data-testid="mobile-technology-toggle"
+                  className="flex items-center justify-between text-[15px] font-medium text-[#334155] py-2.5 cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+                >
+                  Technology
+                  <ChevronDown className="w-4 h-4 text-[#64748B]" />
+                </summary>
+                <div className="grid grid-cols-2 gap-x-3 pb-3">
+                  <a
+                    href={`${HOME}technology`}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-1.5 py-1.5 text-[13.5px] font-medium text-[#0284C7] col-span-2"
+                  >
+                    <ChevronRight className="w-3 h-3 shrink-0" />
+                    Technology overview
+                  </a>
+                  {technologies.map((t) => (
+                    <a
+                      key={t.name}
+                      href={techHref(t)}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-1.5 py-1.5 text-[13.5px] text-[#475569]"
+                    >
+                      <ChevronRight className="w-3 h-3 text-[#0284C7] shrink-0" />
+                      {t.name}
                     </a>
                   ))}
                 </div>

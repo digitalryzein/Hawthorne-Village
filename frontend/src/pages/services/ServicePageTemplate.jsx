@@ -103,7 +103,7 @@ function TwoTone({ a, b, lightClass = "text-[#64748B]" }) {
 
 function PageMeta({ config }) {
   useEffect(() => {
-    const pageUrl = `https://hawthornevillagedental.ca/services/${config.slug}/`;
+    const pageUrl = `https://hawthornevillagedental.ca${config.urlPath || `/services/${config.slug}/`}`;
     const prevTitle = document.title;
     document.title = config.meta.title;
 
@@ -117,7 +117,7 @@ function PageMeta({ config }) {
 
     const procedureSchema = {
       "@context": "https://schema.org",
-      "@type": "MedicalProcedure",
+      "@type": config.meta.schemaType || "MedicalProcedure",
       name: config.name,
       ...(config.meta.procedure?.alternateName ? { alternateName: config.meta.procedure.alternateName } : {}),
       url: pageUrl,
@@ -148,12 +148,13 @@ function PageMeta({ config }) {
       })),
     };
 
+    const parentCrumb = config.breadcrumb || { label: "Services", href: "/#services" };
     const breadcrumbSchema = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: "https://hawthornevillagedental.ca/" },
-        { "@type": "ListItem", position: 2, name: "Services", item: "https://hawthornevillagedental.ca/#services" },
+        { "@type": "ListItem", position: 2, name: parentCrumb.label, item: `https://hawthornevillagedental.ca${parentCrumb.href}` },
         { "@type": "ListItem", position: 3, name: config.name, item: pageUrl },
       ],
     };
@@ -196,7 +197,12 @@ function PageHero({ config }) {
         <nav data-testid={`${tid}-breadcrumb`} aria-label="Breadcrumb" className="mb-8 flex items-center gap-1.5 text-[13px] text-[#64748B]">
           <a href={`${process.env.PUBLIC_URL}/`} className="hover:text-[#0A192F] transition-colors">Home</a>
           <ChevronRight className="w-3.5 h-3.5" />
-          <a href={`${process.env.PUBLIC_URL}/#services`} className="hover:text-[#0A192F] transition-colors">Services</a>
+          <a
+            href={`${process.env.PUBLIC_URL}${(config.breadcrumb || { href: "/#services" }).href}`}
+            className="hover:text-[#0A192F] transition-colors"
+          >
+            {(config.breadcrumb || { label: "Services" }).label}
+          </a>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-[#0A192F] font-medium">{config.name}</span>
         </nav>
@@ -725,7 +731,7 @@ export default function ServicePageTemplate({ config }) {
         <OptionsSection config={config} />
         {config.galleryId && <GallerySection config={config} />}
         <WhyHereSection config={config} />
-        <CostSection config={config} />
+        {config.cost && <CostSection config={config} />}
         <SocialProof />
         <FAQSection config={config} />
         <FinalCTA />

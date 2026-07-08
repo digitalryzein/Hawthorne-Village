@@ -7,7 +7,7 @@ const HOME = `${process.env.PUBLIC_URL}/`;
 const exploreLinks = [
   { label: "Services", href: `${HOME}#services` },
   { label: "Dr. Sarna", href: `${HOME}dr-sarna` },
-  { label: "Technology", href: `${HOME}#technology` },
+  { label: "Technology", href: `${HOME}technology` },
   { label: "Reviews", href: `${HOME}#reviews` },
   { label: "Smile Gallery", href: `${HOME}#gallery` },
   { label: "FAQ", href: `${HOME}#faq` },
