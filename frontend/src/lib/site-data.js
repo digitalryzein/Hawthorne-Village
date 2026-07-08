@@ -28,12 +28,12 @@ export const clinic = {
     "Willmott", "Scott", "Bronte Meadows", "Campbellville",
     "Milton East", "Milton West", "Mississauga", "Oakville", "Burlington", "Georgetown",
   ],
-  googleRating: 4.9,
-  reviewCount: 480,
+  googleRating: 4.7,
+  reviewCount: 435,
 };
 
 export const trustBadges = [
-  { label: "Google Rating", value: "4.9 / 5" },
+  { label: "Google Rating", value: "4.7 / 5" },
   { label: "Happy Patients", value: "10,000+" },
   { label: "Years in Milton", value: "15+" },
   { label: "Insurance", value: "Direct Billing" },
@@ -169,7 +169,7 @@ export const insurers = [
 ];
 
 export const faqs = [
-  { q: "What makes Hawthorne Village Dental Care the best dental clinic in Milton?", a: "Patients point to the same things again and again: same-day emergency care, evening and Saturday hours, direct billing, CDCP acceptance, and a team led by an ICOI Fellow with over 25 years of experience. We're proud to be one of the top-rated dental clinics in Milton, with a 4.9 rating from more than 480 Google reviews." },
+  { q: "What makes Hawthorne Village Dental Care the best dental clinic in Milton?", a: "Patients point to the same things again and again: same-day emergency care, evening and Saturday hours, direct billing, CDCP acceptance, and a team led by an ICOI Fellow with over 25 years of experience. We're proud to be one of the top-rated dental clinics in Milton, with a 4.7 rating from more than 435 Google reviews." },
   { q: "Are you accepting new patients in Milton?", a: "Yes, we welcome new patients of every age, from one-year-olds visiting for their first check-up to grandparents. Most new-patient appointments are available within a week." },
   { q: "Do you accept walk-in patients or same-day emergencies?", a: "We don't operate as a walk-in dentist for routine visits, but we always hold same-day slots for dental emergencies. Call ahead and our front desk will fit you in as quickly as possible, often within hours." },
   { q: "Are you a direct billing dentist near me?", a: "Yes. Hawthorne Village Dental Care bills almost every major Canadian insurer directly, including Manulife, Sun Life, Canada Life, GreenShield, Desjardins and Blue Cross. You only pay any portion your plan does not cover." },

@@ -24,10 +24,10 @@ export default function Hero() {
           <div ref={leftRef} className="reveal">
             <div className="inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 pl-1.5 pr-4 py-1.5 shadow-sm mb-6">
               <span className="flex items-center gap-1 rounded-full bg-[#0A192F] text-white text-[11px] font-semibold px-2 py-0.5">
-                <Star className="w-3 h-3 fill-[#F59E0B] text-[#F59E0B]" /> 4.9
+                <Star className="w-3 h-3 fill-[#F59E0B] text-[#F59E0B]" /> {clinic.googleRating}
               </span>
               <span className="text-[13px] text-[#334155]">
-                Rated by <strong className="font-semibold text-[#0A192F]">480+</strong> Milton families on Google
+                Rated by <strong className="font-semibold text-[#0A192F]">{clinic.reviewCount}+</strong> Milton families on Google
               </span>
             </div>
 
@@ -97,7 +97,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="text-[13px] text-[#64748B]">Google Reviews</div>
-                <div className="font-display font-semibold text-[#0A192F]">4.9 · 480+ reviews</div>
+                <div className="font-display font-semibold text-[#0A192F]">{clinic.googleRating} · {clinic.reviewCount}+ reviews</div>
               </div>
             </div>
 
