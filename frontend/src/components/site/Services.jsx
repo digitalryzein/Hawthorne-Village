@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/site-data";
 import { useReveal } from "@/hooks/useReveal";
@@ -7,30 +8,27 @@ function ServiceCard({ s }) {
     <a
       href="#contact"
       data-testid={`service-card-${s.name.replace(/\s+/g, "-").toLowerCase()}`}
-      className="group relative shrink-0 w-[300px] md:w-[340px] rounded-[28px] overflow-hidden bg-white border border-slate-100 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.15)] hover:shadow-[0_25px_60px_-20px_rgba(10,25,47,0.3)] hover:-translate-y-2 transition-all duration-500 ease-out"
+      onDragStart={(e) => e.preventDefault()}
+      className="group relative shrink-0 w-[300px] md:w-[340px] rounded-[28px] overflow-hidden bg-white border border-slate-100 shadow-[0_10px_40px_-20px_rgba(10,25,47,0.15)] hover:shadow-[0_25px_60px_-20px_rgba(10,25,47,0.3)] hover:-translate-y-2 transition-all duration-500 ease-out select-none"
     >
-      {/* Image */}
       <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
         <img
           src={s.image}
           alt={`${s.name} at Hawthorne Village Dental Care Milton`}
           loading="lazy"
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[900ms] ease-out"
+          draggable={false}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[900ms] ease-out pointer-events-none"
         />
-        {/* Persistent dark gradient at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
-        {/* Top-right floating arrow chip */}
         <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/95 backdrop-blur text-[#0A192F] flex items-center justify-center shadow-md group-hover:bg-[#2563EB] group-hover:text-white group-hover:rotate-45 transition-all duration-500">
           <ArrowUpRight className="w-4 h-4" strokeWidth={2.25} />
         </div>
 
-        {/* Bottom copy */}
         <div className="absolute inset-x-0 bottom-0 p-6 text-white">
           <h3 className="font-display text-[22px] md:text-[24px] font-semibold leading-tight">
             {s.name}
           </h3>
-          {/* Slide-up blurb (hidden by default, reveal on hover) */}
           <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-out">
             <p className="overflow-hidden text-[13.5px] leading-relaxed text-white/85 opacity-0 group-hover:opacity-100 group-hover:mt-2.5 transition-all duration-500 delay-100">
               {s.blurb}
@@ -47,10 +45,131 @@ function ServiceCard({ s }) {
   );
 }
 
+/**
+ * Auto-scrolling + drag/wheel scrollable services rail.
+ * - Continuously scrolls left at ~0.5 px per frame.
+ * - Pauses while the user is hovering, dragging or wheeling.
+ * - Resumes after 1.4s of no interaction.
+ * - Loops seamlessly by wrapping scrollLeft between [0, half].
+ */
+function ScrollRail({ items }) {
+  const track = [...items, ...items];
+  const railRef = useRef(null);
+  const [dragging, setDragging] = useState(false);
+
+  useEffect(() => {
+    const el = railRef.current;
+    if (!el) return;
+
+    let raf;
+    let paused = false;
+    let resumeAt = 0;
+
+    const step = () => {
+      const now = performance.now();
+      if (!paused && now > resumeAt) {
+        // Seamless loop: reset when we've scrolled past half of the track width.
+        const half = el.scrollWidth / 2;
+        if (el.scrollLeft >= half) el.scrollLeft -= half;
+        el.scrollLeft += 0.5;
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+
+    const pauseFor = (ms = 1400) => {
+      resumeAt = performance.now() + ms;
+    };
+    const hardPause = () => {
+      paused = true;
+    };
+    const release = () => {
+      paused = false;
+      pauseFor(1400);
+    };
+
+    // Hover
+    el.addEventListener("mouseenter", hardPause);
+    el.addEventListener("mouseleave", release);
+
+    // Wheel — turn vertical wheel into horizontal scroll
+    const onWheel = (e) => {
+      const dominant = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      if (!dominant) return;
+      e.preventDefault();
+      el.scrollLeft += dominant;
+      pauseFor(1400);
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+
+    // Drag to scroll
+    let isDown = false;
+    let startX = 0;
+    let startScroll = 0;
+
+    const onDown = (e) => {
+      isDown = true;
+      setDragging(true);
+      startX = e.pageX;
+      startScroll = el.scrollLeft;
+      el.setPointerCapture?.(e.pointerId);
+      hardPause();
+    };
+    const onMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      el.scrollLeft = startScroll - (e.pageX - startX);
+    };
+    const onUp = (e) => {
+      if (!isDown) return;
+      isDown = false;
+      setDragging(false);
+      el.releasePointerCapture?.(e.pointerId);
+      release();
+    };
+    el.addEventListener("pointerdown", onDown);
+    el.addEventListener("pointermove", onMove);
+    el.addEventListener("pointerup", onUp);
+    el.addEventListener("pointercancel", onUp);
+    el.addEventListener("pointerleave", onUp);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("mouseenter", hardPause);
+      el.removeEventListener("mouseleave", release);
+      el.removeEventListener("wheel", onWheel);
+      el.removeEventListener("pointerdown", onDown);
+      el.removeEventListener("pointermove", onMove);
+      el.removeEventListener("pointerup", onUp);
+      el.removeEventListener("pointercancel", onUp);
+      el.removeEventListener("pointerleave", onUp);
+    };
+  }, []);
+
+  return (
+    <div className="relative">
+      <div
+        ref={railRef}
+        data-testid="services-rail"
+        className={`flex gap-5 md:gap-6 overflow-x-auto no-scrollbar px-6 md:px-8 py-2 ${
+          dragging ? "cursor-grabbing" : "cursor-grab"
+        }`}
+        style={{ scrollBehavior: "auto" }}
+      >
+        {track.map((s, i) => (
+          <ServiceCard key={`${s.name}-${i}`} s={s} />
+        ))}
+      </div>
+
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent" />
+    </div>
+  );
+}
+
 export default function Services() {
   const ref = useReveal();
-  // Duplicate the list for a seamless marquee loop.
-  const track = [...services, ...services];
 
   return (
     <section id="services" ref={ref} className="reveal py-24 md:py-32 bg-white overflow-hidden">
@@ -71,25 +190,11 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Auto-scrolling marquee */}
-      <div className="relative group/track">
-        <div
-          className="flex gap-5 md:gap-6 animate-services-marquee w-max px-6 md:px-8 group-hover/track:[animation-play-state:paused]"
-        >
-          {track.map((s, i) => (
-            <ServiceCard key={`${s.name}-${i}`} s={s} />
-          ))}
-        </div>
+      <ScrollRail items={services} />
 
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent" />
-      </div>
-
-      {/* Hint text */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-10 text-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-8 text-center">
         <p className="text-[13px] text-[#94A3B8]">
-          Hover to pause · Tap any service to book a consultation
+          Auto-scrolling · Drag, scroll or hover to pause
         </p>
       </div>
     </section>

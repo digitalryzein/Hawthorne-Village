@@ -118,6 +118,16 @@ body {
     animation: services-marquee 80s linear infinite;
 }
 
+/* Hide scrollbars but keep scroll behaviour */
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 /* Fade-up reveal (uses IntersectionObserver in components) */
 .reveal {
     opacity: 0;
